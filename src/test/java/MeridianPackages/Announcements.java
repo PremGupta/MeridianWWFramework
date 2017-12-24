@@ -27,14 +27,14 @@ import org.testng.annotations.Test;
 
 import com.gargoylesoftware.htmlunit.javascript.host.Screen;
 
-import ObjectRepository.HomePage;
 import ObjectRepository_Accessories.Shoppingcart;
+import ObjectRepository_Announcements.AnnouncementsPage;
+import ObjectRepository_Announcements.AwardsCentralHomePage;
+import ObjectRepository_Announcements.HomePage;
+import ObjectRepository_Announcements.loginPage;
 import Resources.base;
-import ObjectRepository.AnnouncementsPage;
-import ObjectRepository.AwardsCentralHomePage;
 import ObjectRepository_Accessories.Blenders;
 import ObjectRepository_Accessories.CoffeeBevarages;
-import ObjectRepository.loginPage;
 import jdk.internal.org.objectweb.asm.tree.TryCatchBlockNode;
 
 public class Announcements extends base{

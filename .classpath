@@ -19,6 +19,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="C:/Users/Prem/Downloads/Study/Selenium Files/Selenium Jars/aspose-cells-7.0.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Prem/Downloads/Study/Selenium Files/Selenium Jars/cglib-nodep-3.2.4.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Prem/Downloads/Study/Selenium Files/Selenium Jars/client-combined-3.0.0-beta3-nodeps.jar"/>
@@ -70,6 +71,5 @@
 	<classpathentry kind="lib" path="C:/Users/Prem/Downloads/Study/Selenium Files/Selenium Jars/stax2-api-3.0.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Prem/Downloads/Study/Selenium Files/Selenium Jars/woodstox-core-asl-4.0.8.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Prem/Downloads/Study/Selenium Files/Selenium Jars/xmlbeans-2.6.0.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
