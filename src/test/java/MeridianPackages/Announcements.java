@@ -96,16 +96,17 @@ public class Announcements extends base{
 	    scr.type("test");
 		driver.switchTo().defaultContent();
 		ap.Submit().click();
-		log.info("This test is passed");
 		
 		Thread.sleep(5000);
 		Screenshot.getscreenshot(driver);
 		assertEquals(driver.findElement(By.xpath("//*[@id=\'announcement\']/div/div/div[1]/ul/li[1]/span")).getText(), "Test123"+randomnumber);
 	    System.out.println("Test123"+randomnumber);
+	    log.info("This test is passed as : "+"Test123"+randomnumber+" is created");
 	}
 	
 	catch (Exception e) {
       e.printStackTrace();
+		log.info("This test is passed as : "+"Test123"+randomnumber+" is not created");
       Screenshot.getscreenshot(driver);
 	}
 

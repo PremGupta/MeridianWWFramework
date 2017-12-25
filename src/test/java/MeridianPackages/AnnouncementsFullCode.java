@@ -42,6 +42,8 @@ public class AnnouncementsFullCode{
 	public static WebDriver driver;
 	public static int randomnumber;
 	
+	public static Logger log =LogManager.getLogger(base.class.getName());
+	
 	@Test()
 	
 	public void AnnouncementCreation() throws IOException, InterruptedException
@@ -91,10 +93,12 @@ public class AnnouncementsFullCode{
 		Screenshot.getscreenshot(driver);
 		assertEquals(driver.findElement(By.xpath("//*[@id=\'announcement\']/div/div/div[1]/ul/li[1]/span")).getText(), "Test123"+randomnumber);
 	    System.out.println("Test123"+randomnumber);
+	    log.info("This test is passed as : "+"Test123"+randomnumber+" is created");
 	}
 	
 	catch (Exception e) {
 		Screenshot.failedStepsScreenshot(driver);
+		log.info("This test is passed as : "+"Test123"+randomnumber+" is not created");
         e.printStackTrace();
      
 	}
