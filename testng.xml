@@ -5,7 +5,7 @@
      
         
          <listener class-name="MeridianPackages.listeners"/>
-         <listener class-name="Resources.ExtentReporterNG"/>
+         <listener class-name="resources.ExtentReporterNG"/>
          
 
  </listeners>
