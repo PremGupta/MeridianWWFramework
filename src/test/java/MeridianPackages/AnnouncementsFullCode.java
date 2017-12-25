@@ -15,7 +15,10 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
@@ -43,8 +46,15 @@ public class AnnouncementsFullCode{
      
 		try 
 		{
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Prem\\Downloads\\Study\\Selenium Files\\Zip Files\\chromedriver.exe");
-		driver= new ChromeDriver();
+			    
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Prem\\Meridian\\Jars\\chromedriver.exe");
+		driver = new ChromeDriver();
+		
+        /*System.setProperty("webdriver.gecko.driver", "C:\\Users\\Prem\\Meridian\\Jars\\geckodriver.exe");
+	    driver = new FirefoxDriver();*/
+	    
+		/*System.setProperty("webdriver.ie.driver", "C:\\Users\\Prem\\Meridian\\Jars\\IEDriverServer.exe");
+		driver = new InternetExplorerDriver();*/
 		driver.get("https://demosite.meridinet.com/template/login.html");
 		
 		driver.manage().window().maximize();
@@ -72,6 +82,7 @@ public class AnnouncementsFullCode{
 	    driver.findElement(By.xpath("//input[@id='myCheckBox']")).click();
 		
 	    Thread.sleep(10000);
+	    act1.moveToElement(driver.findElement(By.xpath(".//div[@id='cke_1_contents']/iframe"))).build().perform();
 		WebElement iframeElement = driver.findElement(By.xpath(".//div[@id='cke_1_contents']/iframe"));
 	    driver.switchTo().frame(iframeElement);
 	
@@ -87,6 +98,9 @@ public class AnnouncementsFullCode{
 		Screenshot.getscreenshot(driver);
 		assertEquals(driver.findElement(By.xpath("//*[@id=\'announcement\']/div/div/div[1]/ul/li[1]/span")).getText(), "Test123"+randomnumber);
 	    System.out.println("Test123"+randomnumber);
+	    
+		Thread.sleep(5000);
+	    driver.findElement(By.xpath("//input[@value='Approved']")).click();
 	    log.info("This test is passed as : "+"Test123"+randomnumber+" is created");
 	}
 	

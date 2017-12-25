@@ -18,7 +18,7 @@ public class AnnouncementsPage{
 	   By announcementText=By.xpath(".//*[@id='cke_ckeditor']/div[1]/div[@id='cke_1_contents']");
 	   By selectCheckbox=By.xpath("//input[@id='myCheckBox']");
 	   By submit=By.xpath("//button[@id='submit']");
-	   
+	   By approved=By.xpath("//input[@value='Approved']");
 	   
 	public AnnouncementsPage(WebDriver driver)
 	{
@@ -74,5 +74,10 @@ public class AnnouncementsPage{
 	   public  WebElement Submit()
 	   {
 		   return driver.findElement(submit);
+	   }
+	   
+	   public  WebElement Approved()
+	   {
+		   return driver.findElement(approved);
 	   }
 }

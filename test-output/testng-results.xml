@@ -1,47 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="283315" started-at="2017-12-25T09:31:12Z" finished-at="2017-12-25T09:35:55Z">
+  <suite name="Default suite" duration-ms="1798" started-at="2017-12-25T18:36:10Z" finished-at="2017-12-25T18:36:12Z">
     <groups>
     </groups>
-    <test name="Validating User login" duration-ms="283315" started-at="2017-12-25T09:31:12Z" finished-at="2017-12-25T09:35:55Z">
-      <class name="MeridianPackages.Announcements">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:MeridianPackages.Announcements@2ae88712]" name="initialize" is-config="true" duration-ms="4208" started-at="2017-12-25T15:01:12Z" finished-at="2017-12-25T15:01:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="AnnouncementCreation(java.lang.String, java.lang.String)[pri:0, instance:MeridianPackages.Announcements@2ae88712]" name="AnnouncementCreation" duration-ms="133745" started-at="2017-12-25T15:01:16Z" data-provider="getData" finished-at="2017-12-25T15:03:30Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[meridian]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Demo]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AnnouncementCreation -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:MeridianPackages.Announcements@2ae88712]" name="teardown" is-config="true" duration-ms="2326" started-at="2017-12-25T15:05:52Z" finished-at="2017-12-25T15:05:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:MeridianPackages.AnnouncementsFullCode@10508ba6]" name="teardown" is-config="true" duration-ms="286" started-at="2017-12-25T15:05:55Z" finished-at="2017-12-25T15:05:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- MeridianPackages.Announcements -->
+    <test name="Default test" duration-ms="1798" started-at="2017-12-25T18:36:10Z" finished-at="2017-12-25T18:36:12Z">
       <class name="MeridianPackages.AnnouncementsFullCode">
-        <test-method status="PASS" signature="AnnouncementCreation()[pri:0, instance:MeridianPackages.AnnouncementsFullCode@10508ba6]" name="AnnouncementCreation" duration-ms="142684" started-at="2017-12-25T15:03:30Z" finished-at="2017-12-25T15:05:52Z">
+        <test-method status="PASS" signature="AnnouncementCreation()[pri:0, instance:MeridianPackages.AnnouncementsFullCode@35cabb2a]" name="AnnouncementCreation" duration-ms="1746" started-at="2017-12-26T00:06:10Z" finished-at="2017-12-26T00:06:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AnnouncementCreation -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:MeridianPackages.AnnouncementsFullCode@35cabb2a]" name="teardown" is-config="true" duration-ms="1" started-at="2017-12-26T00:06:12Z" finished-at="2017-12-26T00:06:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
       </class> <!-- MeridianPackages.AnnouncementsFullCode -->
-    </test> <!-- Validating User login -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

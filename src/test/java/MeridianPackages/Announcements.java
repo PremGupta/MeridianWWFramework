@@ -91,6 +91,9 @@ public class Announcements extends base{
 		Screenshot.getscreenshot(driver);
 		assertEquals(driver.findElement(By.xpath("//*[@id=\'announcement\']/div/div/div[1]/ul/li[1]/span")).getText(), "Test123"+randomnumber);
 	    System.out.println("Test123"+randomnumber);
+	    
+		Thread.sleep(5000);
+        ap.Approved().click();
 	    log.info("This test is passed as : "+"Test123"+randomnumber+" is created");
 	}
 	
