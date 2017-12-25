@@ -28,7 +28,6 @@ import org.testng.annotations.Test;
 import com.gargoylesoftware.htmlunit.javascript.host.Screen;
 
 import ObjectRepository_Announcements.AnnouncementsPage;
-import ObjectRepository_Announcements.AwardsCentralHomePage;
 import ObjectRepository_Announcements.HomePage;
 import ObjectRepository_Announcements.loginPage;
 import jdk.internal.org.objectweb.asm.tree.TryCatchBlockNode;
