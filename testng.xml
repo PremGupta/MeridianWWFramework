@@ -16,5 +16,5 @@
       <class name="MeridianPackages.AnnouncementsFullCode"/>
           </classes>
       </test>
-   <!-- Test -->
-</suite> <!-- Suite -->
+
+</suite>

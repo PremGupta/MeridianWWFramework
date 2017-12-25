@@ -22,7 +22,7 @@ public WebDriver initializeDriver() throws IOException
 {
 	
  prop= new Properties();
-FileInputStream fis=new FileInputStream("C:\\Users\\Prem\\Meridian\\src\\main\\java\\Resources\\data.properties");
+FileInputStream fis=new FileInputStream("C:\\Users\\Prem\\Meridian\\src\\main\\java\\resources\\data.properties");
 
 prop.load(fis);
 String browserName=prop.getProperty("browser");

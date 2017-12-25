@@ -27,13 +27,10 @@ import org.testng.annotations.Test;
 
 import com.gargoylesoftware.htmlunit.javascript.host.Screen;
 
-import ObjectRepository_Accessories.Shoppingcart;
 import ObjectRepository_Announcements.AnnouncementsPage;
 import ObjectRepository_Announcements.AwardsCentralHomePage;
 import ObjectRepository_Announcements.HomePage;
 import ObjectRepository_Announcements.loginPage;
-import ObjectRepository_Accessories.Blenders;
-import ObjectRepository_Accessories.CoffeeBevarages;
 import jdk.internal.org.objectweb.asm.tree.TryCatchBlockNode;
 import resources.base;
 
@@ -106,7 +103,7 @@ public class Announcements extends base{
 	
 	catch (Exception e) {
       e.printStackTrace();
-		log.info("This test is passed as : "+"Test123"+randomnumber+" is not created");
+		log.info("This test is Failed as : "+"Test123"+randomnumber+" is not created");
       Screenshot.getscreenshot(driver);
 	}
 

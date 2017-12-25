@@ -27,13 +27,10 @@ import org.testng.annotations.Test;
 
 import com.gargoylesoftware.htmlunit.javascript.host.Screen;
 
-import ObjectRepository_Accessories.Shoppingcart;
 import ObjectRepository_Announcements.AnnouncementsPage;
 import ObjectRepository_Announcements.AwardsCentralHomePage;
 import ObjectRepository_Announcements.HomePage;
 import ObjectRepository_Announcements.loginPage;
-import ObjectRepository_Accessories.Blenders;
-import ObjectRepository_Accessories.CoffeeBevarages;
 import jdk.internal.org.objectweb.asm.tree.TryCatchBlockNode;
 import resources.base;
 
@@ -62,6 +59,7 @@ public class AnnouncementsFullCode{
 		driver.findElement(By.id("password")).sendKeys("Demo");
 		driver.findElement(By.xpath("//input[@value='Login']")).click();
 		
+		Thread.sleep(10000);
 		WebElement admin=driver.findElement(By.xpath("//a[@class='dropdown-toggle has-submenu'] [text()='Admin']"));
 		Actions act1=new Actions(driver);
 		act1.moveToElement(admin).build().perform();
@@ -98,7 +96,7 @@ public class AnnouncementsFullCode{
 	
 	catch (Exception e) {
 		Screenshot.failedStepsScreenshot(driver);
-		log.info("This test is passed as : "+"Test123"+randomnumber+" is not created");
+		log.info("This test is Failed as : "+"Test123"+randomnumber+" is not created");
         e.printStackTrace();
      
 	}
