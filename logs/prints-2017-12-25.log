@@ -1,0 +1,6 @@
+14:39:36.303 [main] INFO  resources.base - This test is passed
+14:39:41.684 [main] INFO  resources.base - This test is passed as : Test1239341is created
+14:55:58.662 [main] INFO  resources.base - This test is passed as : Test1239460 is created
+14:57:20.295 [main] INFO  resources.base - This test is passed as : Test1230 is not created
+15:03:30.111 [main] INFO  resources.base - This test is passed as : Test1233982 is created
+15:05:52.809 [main] INFO  resources.base - This test is passed as : Test123903 is created

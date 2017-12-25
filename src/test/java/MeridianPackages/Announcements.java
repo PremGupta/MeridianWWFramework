@@ -18,19 +18,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.sikuli.script.Pattern;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import com.gargoylesoftware.htmlunit.javascript.host.Screen;
-
 import ObjectRepository_Announcements.AnnouncementsPage;
 import ObjectRepository_Announcements.HomePage;
 import ObjectRepository_Announcements.loginPage;
-import jdk.internal.org.objectweb.asm.tree.TryCatchBlockNode;
 import resources.base;
 
 
@@ -80,16 +75,15 @@ public class Announcements extends base{
 		ap.ThruDate().click();
 		ap.EndDate().click();
 		ap.SelectCheckbox().click();
-		
-	
-		Thread.sleep(10000);
-		WebElement iframeElement = driver.findElement(By.xpath(".//*[@id='cke_ckeditor']/div/div/iframe"));
-	    driver.switchTo().frame(iframeElement);
 	    
-	    org.sikuli.script.Screen scr=new org.sikuli.script.Screen();
-	    Pattern Image1=new Pattern("C:\\Users\\Prem\\Meridian\\Images\\Image1.PNG");
-		scr.click(Image1);
-	    scr.type("test");
+	    Thread.sleep(10000);
+		WebElement iframeElement = driver.findElement(By.xpath(".//div[@id='cke_1_contents']/iframe"));
+	    driver.switchTo().frame(iframeElement);
+	
+	    driver.findElement(By.xpath("html/body/p")).click();
+	    act1.moveToElement(driver.findElement(By.xpath("html/body/p"))).build().perform();
+	    act1.doubleClick(driver.findElement(By.xpath("html/body/p"))).sendKeys("shhdshaas").build().perform();
+	    
 		driver.switchTo().defaultContent();
 		ap.Submit().click();
 		

@@ -43,7 +43,7 @@
         <version>2.12</version>
           <configuration>
            <suiteXmlFiles>
-               <suiteXmlFile>C:\Users\Prem\Meridian\testng.xml</suiteXmlFile>
+               <suiteXmlFile>testng.xml</suiteXmlFile>
           </suiteXmlFiles>
                  </configuration> 
     </plugin>
