@@ -6,7 +6,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import Resources.base;
+import resources.base;
 
 public class listeners implements ITestListener  {
 base b=new base();

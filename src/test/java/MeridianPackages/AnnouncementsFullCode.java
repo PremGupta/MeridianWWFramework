@@ -32,10 +32,10 @@ import ObjectRepository_Announcements.AnnouncementsPage;
 import ObjectRepository_Announcements.AwardsCentralHomePage;
 import ObjectRepository_Announcements.HomePage;
 import ObjectRepository_Announcements.loginPage;
-import Resources.base;
 import ObjectRepository_Accessories.Blenders;
 import ObjectRepository_Accessories.CoffeeBevarages;
 import jdk.internal.org.objectweb.asm.tree.TryCatchBlockNode;
+import resources.base;
 
 public class AnnouncementsFullCode{
  
