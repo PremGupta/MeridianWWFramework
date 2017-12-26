@@ -31,7 +31,7 @@ import resources.base;
 public class Announcements extends base {
 
 	public static WebDriver driver;
-	public static int randomnumber;
+	public static int randomnumber=0;
 
 	public static Logger log = LogManager.getLogger(base.class.getName());
 

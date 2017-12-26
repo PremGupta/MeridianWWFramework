@@ -35,7 +35,7 @@ import resources.base;
 public class AnnouncementsFullCode {
 
 	public static WebDriver driver;
-	public static int randomnumber;
+	public static int randomnumber=0;
 
 	public static Logger log = LogManager.getLogger(base.class.getName());
 
@@ -45,18 +45,18 @@ public class AnnouncementsFullCode {
 
 		try {
 
-			System.setProperty("webdriver.chrome.driver", "E:\\WhereverWeb\\MeridianWW\\Jars\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Prem\\Meridian\\Jars\\chromedriver.exe");
 			driver = new ChromeDriver();
 
 			/*
 			 * System.setProperty("webdriver.gecko.driver",
-			 * "E:\\WhereverWeb\\MeridianWW\\Jars\\geckodriver.exe"); driver =
+			 * "C:\\Users\\Prem\\Meridian\\Jars\\geckodriver.exe"); driver =
 			 * new FirefoxDriver();
 			 */
 
 			/*
 			 * System.setProperty("webdriver.ie.driver",
-			 * "E:\\WhereverWeb\\MeridianWW\\Jars\\IEDriverServer.exe"); driver
+			 * "C:\\Users\\Prem\\Meridian\\Jars\\IEDriverServer.exe"); driver
 			 * = new InternetExplorerDriver();
 			 */
 			driver.get("https://demosite.meridinet.com/template/login.html");
@@ -78,7 +78,7 @@ public class AnnouncementsFullCode {
 			driver.findElement(By.xpath("(//a[text()='Announcements'])[2]")).click();
 
 			driver.findElement(By.xpath("//input[@value='Create New Announcement']")).click();
-			randomnumber = (int) (10 + Math.random() * ((1000 - 1) + 1));
+			randomnumber = (int) (10 + Math.random() * ((10000 - 1) + 1));
 			driver.findElement(By.xpath("//*[@id='sTitle']")).sendKeys("Test123" + randomnumber);
 			driver.findElement(By.id("dFromDate")).click();
 			driver.findElement(By
