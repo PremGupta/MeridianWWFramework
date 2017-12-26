@@ -32,98 +32,106 @@ import ObjectRepository_Announcements.loginPage;
 
 import resources.base;
 
-public class AnnouncementsFullCode{
- 
+public class AnnouncementsFullCode {
+
 	public static WebDriver driver;
 	public static int randomnumber;
-	
-	public static Logger log =LogManager.getLogger(base.class.getName());
-	
+
+	public static Logger log = LogManager.getLogger(base.class.getName());
+
 	@Test()
-	
-	public void AnnouncementCreation_Fullcode() throws IOException, InterruptedException
-	{ 
-     
-		try 
-		{
-			    
-		System.setProperty("webdriver.chrome.driver", "E:\\WhereverWeb\\MeridianWW\\Jars\\chromedriver.exe");
-		driver = new ChromeDriver();
-		
-        /*System.setProperty("webdriver.gecko.driver", "C:\\Users\\Prem\\Meridian\\Jars\\geckodriver.exe");
-	    driver = new FirefoxDriver();*/
-	    
-		/*System.setProperty("webdriver.ie.driver", "C:\\Users\\Prem\\Meridian\\Jars\\IEDriverServer.exe");
-		driver = new InternetExplorerDriver();*/
-		driver.get("https://demosite.meridinet.com/template/login.html");
-		
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		
-		driver.findElement(By.id("username")).sendKeys("Meridian");
-		driver.findElement(By.id("password")).sendKeys("Demo");
-		driver.findElement(By.xpath("//input[@value='Login']")).click();
-		
-		Thread.sleep(10000);
-		WebElement admin=driver.findElement(By.xpath("//a[@class='dropdown-toggle has-submenu'] [text()='Admin']"));
-		Actions act1=new Actions(driver);
-		act1.moveToElement(admin).build().perform();
-		driver.findElement(By.xpath("//a[@class='dropdown-toggle has-submenu'][text()='Admin']")).click();
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("(//a[text()='Announcements'])[2]")).click();
-	
-		driver.findElement(By.xpath("//input[@value='Create New Announcement']")).click();
-		randomnumber= (int) (10 + Math.random() * ((10000 - 1) + 1));
-		driver.findElement(By.xpath("//*[@id='sTitle']")).sendKeys("Test123"+randomnumber);
-		driver.findElement(By.id("dFromDate")).click();
-		driver.findElement(By.xpath("//*[starts-with(@class,'datepicker')]/div[1][@class='datepicker-days']/table/tbody/tr[5]/td[6]")).click();
-		driver.findElement(By.id("dThruDate")).click();
-		driver.findElement(By.xpath("//*[starts-with(@class,'datepicker')]/div[1][@class='datepicker-days']/table/tbody/tr[5]/td[7]")).click();
-	    driver.findElement(By.xpath("//input[@id='myCheckBox']")).click();
-		
-	    Thread.sleep(10000);
-	    act1.moveToElement(driver.findElement(By.xpath(".//div[@id='cke_1_contents']/iframe"))).build().perform();
-		WebElement iframeElement = driver.findElement(By.xpath(".//div[@id='cke_1_contents']/iframe"));
-	    driver.switchTo().frame(iframeElement);
-	
-	    driver.findElement(By.xpath("html/body/p")).click();
-	    act1.moveToElement(driver.findElement(By.xpath("html/body/p"))).build().perform();
-	    act1.doubleClick(driver.findElement(By.xpath("html/body/p"))).sendKeys("shhdshaas").build().perform();
-	    
-		driver.switchTo().defaultContent();
-		driver.findElement(By.xpath("//button[@id='submit']")).click();
-		
-		
-		Thread.sleep(5000);
-		Screenshot.getscreenshot(driver);
-		assertEquals(driver.findElement(By.xpath("//*[@id=\'announcement\']/div/div/div[1]/ul/li[1]/span")).getText(), "Test123"+randomnumber);
-	    System.out.println("Test123"+randomnumber);
-	    log.info("This test is passed as : "+"Test123"+randomnumber+" is created");
-	    
-		Thread.sleep(5000);
-		WebElement Approved=driver.findElement(By.xpath("//input[@value='Approved']"));
-		act1.moveToElement(Approved).build().perform();
-	    act1.moveToElement(Approved).click();
-	    log.info("This test is passed as : "+"Test123"+randomnumber+" is Approved");
+
+	public void AnnouncementCreation_Fullcode() throws IOException, InterruptedException {
+
+		try {
+
+			System.setProperty("webdriver.chrome.driver", "E:\\WhereverWeb\\MeridianWW\\Jars\\chromedriver.exe");
+			driver = new ChromeDriver();
+
+			/*
+			 * System.setProperty("webdriver.gecko.driver",
+			 * "E:\\WhereverWeb\\MeridianWW\\Jars\\geckodriver.exe"); driver =
+			 * new FirefoxDriver();
+			 */
+
+			/*
+			 * System.setProperty("webdriver.ie.driver",
+			 * "E:\\WhereverWeb\\MeridianWW\\Jars\\IEDriverServer.exe"); driver
+			 * = new InternetExplorerDriver();
+			 */
+			driver.get("https://demosite.meridinet.com/template/login.html");
+
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+
+			driver.findElement(By.id("username")).sendKeys("Meridian");
+			driver.findElement(By.id("password")).sendKeys("Demo@09123");
+			driver.findElement(By.xpath("//input[@value='Login']")).click();
+
+			Thread.sleep(10000);
+			WebElement admin = driver
+					.findElement(By.xpath("//a[@class='dropdown-toggle has-submenu'] [text()='Admin']"));
+			Actions act1 = new Actions(driver);
+			act1.moveToElement(admin).build().perform();
+			driver.findElement(By.xpath("//a[@class='dropdown-toggle has-submenu'][text()='Admin']")).click();
+			Thread.sleep(2000);
+			driver.findElement(By.xpath("(//a[text()='Announcements'])[2]")).click();
+
+			driver.findElement(By.xpath("//input[@value='Create New Announcement']")).click();
+			randomnumber = (int) (10 + Math.random() * ((10000 - 1) + 1));
+			driver.findElement(By.xpath("//*[@id='sTitle']")).sendKeys("Test123" + randomnumber);
+			driver.findElement(By.id("dFromDate")).click();
+			driver.findElement(By
+					.xpath("//*[starts-with(@class,'datepicker')]/div[1][@class='datepicker-days']/table/tbody/tr[5]/td[6]"))
+					.click();
+			driver.findElement(By.id("dThruDate")).click();
+			driver.findElement(By
+					.xpath("//*[starts-with(@class,'datepicker')]/div[1][@class='datepicker-days']/table/tbody/tr[5]/td[7]"))
+					.click();
+			driver.findElement(By.xpath("//input[@id='myCheckBox']")).click();
+
+			Thread.sleep(10000);
+			act1.moveToElement(driver.findElement(By.xpath(".//div[@id='cke_1_contents']/iframe"))).build().perform();
+			WebElement iframeElement = driver.findElement(By.xpath(".//div[@id='cke_1_contents']/iframe"));
+			driver.switchTo().frame(iframeElement);
+
+			driver.findElement(By.xpath("html/body/p")).click();
+			act1.moveToElement(driver.findElement(By.xpath("html/body/p"))).build().perform();
+			act1.doubleClick(driver.findElement(By.xpath("html/body/p"))).sendKeys("shhdshaas").build().perform();
+
+			driver.switchTo().defaultContent();
+			driver.findElement(By.xpath("//button[@id='submit']")).click();
+
+			Thread.sleep(5000);
+			Screenshot.getscreenshot(driver);
+			assertEquals(
+					driver.findElement(By.xpath("//*[@id=\'announcement\']/div/div/div[1]/ul/li[1]/span")).getText(),
+					"Test123" + randomnumber);
+			System.out.println("Test123" + randomnumber);
+			log.info("This test is passed as : " + "Test123" + randomnumber + " is created");
+
+			Thread.sleep(5000);
+			WebElement Approved = driver.findElement(By.xpath("//input[@value='Approved']"));
+			act1.moveToElement(Approved).build().perform();
+			act1.moveToElement(Approved).click();
+			log.info("This test is passed as : " + "Test123" + randomnumber + " is Approved");
+		}
+
+		catch (Exception e) {
+			Screenshot.failedStepsScreenshot(driver);
+			log.info("This test is Failed as : " + "Test123" + randomnumber + " is not created");
+			e.printStackTrace();
+
+		}
+
 	}
-	
-	catch (Exception e) {
-		Screenshot.failedStepsScreenshot(driver);
-		log.info("This test is Failed as : "+"Test123"+randomnumber+" is not created");
-        e.printStackTrace();
-     
+
+	@AfterTest
+	public void teardown() {
+
+		driver.close();
+		driver = null;
+
 	}
-
-}
-
-
-@AfterTest
-public void teardown()
-{
-	
-	driver.close();
-	driver=null;
-	
-}
 
 }

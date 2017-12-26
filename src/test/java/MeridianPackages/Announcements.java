@@ -28,108 +28,105 @@ import ObjectRepository_Announcements.HomePage;
 import ObjectRepository_Announcements.loginPage;
 import resources.base;
 
+public class Announcements extends base {
 
-public class Announcements extends base{
- 
 	public static WebDriver driver;
 	public static int randomnumber;
-	
-	public static Logger log =LogManager.getLogger(base.class.getName());
+
+	public static Logger log = LogManager.getLogger(base.class.getName());
+
 	@BeforeTest
-	public void initialize() throws IOException
-	{
-	
-		 driver =initializeDriver();
+	public void initialize() throws IOException {
+
+		driver = initializeDriver();
 
 	}
-	@Test(dataProvider="getData")
-	
-	public void AnnouncementCreation_Framework(String Username,String Password) throws IOException, InterruptedException
-	{
-     
-		try 
-		{
-		driver.get(prop.getProperty("url"));
-		
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		loginPage lp=new loginPage(driver);
-		
-		lp.Username().sendKeys("Meridian");
-		lp.Password().sendKeys("Demo");
-		lp.LoginButton().click();
-		HomePage hp=new HomePage(driver);
-		WebElement admin=driver.findElement(By.xpath("//a[@class='dropdown-toggle has-submenu'][text()='Admin']"));
-		Actions act1=new Actions(driver);
-		act1.moveToElement(admin).build().perform();
-		hp.Admin().click();
-		Thread.sleep(2000);
-		hp.Announcement().click();
-	
-		AnnouncementsPage ap=new AnnouncementsPage(driver);
-		ap.CreateNewAnnouncement().click();
-		randomnumber= (int) (10 + Math.random() * ((10000 - 1) + 1));
-		ap.AnnouncementTitle().sendKeys("Test123"+randomnumber);
-		ap.FromDate().click();
-		ap.StartDate().click();
-		ap.ThruDate().click();
-		ap.EndDate().click();
-		ap.SelectCheckbox().click();
-	    
-	    Thread.sleep(10000);
-		WebElement iframeElement = driver.findElement(By.xpath(".//div[@id='cke_1_contents']/iframe"));
-	    driver.switchTo().frame(iframeElement);
-	
-	    driver.findElement(By.xpath("html/body/p")).click();
-	    act1.moveToElement(driver.findElement(By.xpath("html/body/p"))).build().perform();
-	    act1.doubleClick(driver.findElement(By.xpath("html/body/p"))).sendKeys("shhdshaas").build().perform();
-	    
-		driver.switchTo().defaultContent();
-		ap.Submit().click();
-		
-		Thread.sleep(5000);
-		Screenshot.getscreenshot(driver);
-		assertEquals(driver.findElement(By.xpath("//*[@id=\'announcement\']/div/div/div[1]/ul/li[1]/span")).getText(), "Test123"+randomnumber);
-	    System.out.println("Test123"+randomnumber);
-	    log.info("This test is passed as : "+"Test123"+randomnumber+" is created");
-	    
-		Thread.sleep(5000);
-        //ap.Approved().click();
-		WebElement Approved=ap.Approved();
-		act1.moveToElement(Approved).build().perform();
-	    act1.moveToElement(Approved).click();
-	    log.info("This test is passed as : "+"Test123"+randomnumber+" is Approved");
+
+	@Test(dataProvider = "getData")
+
+	public void AnnouncementCreation_Framework(String Username, String Password)
+			throws IOException, InterruptedException {
+
+		try {
+			driver.get(prop.getProperty("url"));
+
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+			loginPage lp = new loginPage(driver);
+
+			lp.Username().sendKeys(Username);
+			lp.Password().sendKeys(Password);
+			lp.LoginButton().click();
+			HomePage hp = new HomePage(driver);
+			WebElement admin = driver
+					.findElement(By.xpath("//a[@class='dropdown-toggle has-submenu'][text()='Admin']"));
+			Actions act1 = new Actions(driver);
+			act1.moveToElement(admin).build().perform();
+			hp.Admin().click();
+			Thread.sleep(2000);
+			hp.Announcement().click();
+
+			AnnouncementsPage ap = new AnnouncementsPage(driver);
+			ap.CreateNewAnnouncement().click();
+			randomnumber = (int) (10 + Math.random() * ((10000 - 1) + 1));
+			ap.AnnouncementTitle().sendKeys("Test123" + randomnumber);
+			ap.FromDate().click();
+			ap.StartDate().click();
+			ap.ThruDate().click();
+			ap.EndDate().click();
+			ap.SelectCheckbox().click();
+
+			Thread.sleep(10000);
+			WebElement iframeElement = ap.IFrame();
+			driver.switchTo().frame(iframeElement);
+
+			driver.findElement(By.xpath("html/body/p")).click();
+			act1.moveToElement(driver.findElement(By.xpath("html/body/p"))).build().perform();
+			act1.doubleClick(driver.findElement(By.xpath("html/body/p"))).sendKeys("shhdshaas").build().perform();
+
+			driver.switchTo().defaultContent();
+			ap.Submit().click();
+
+			Thread.sleep(5000);
+			Screenshot.getscreenshot(driver);
+			assertEquals(
+					driver.findElement(By.xpath("//*[@id=\'announcement\']/div/div/div[1]/ul/li[1]/span")).getText(),
+					"Test123" + randomnumber);
+			System.out.println("Test123" + randomnumber);
+			log.info("This test is passed as : " + "Test123" + randomnumber + " is created");
+
+			Thread.sleep(5000);
+			WebElement Approved = ap.Approved();
+			act1.moveToElement(Approved).build().perform();
+			act1.moveToElement(Approved).click();
+			log.info("This test is passed as : " + "Test123" + randomnumber + " is Approved");
+		}
+
+		catch (Exception e) {
+			e.printStackTrace();
+			log.info("This test is Failed as : " + "Test123" + randomnumber + " is not created");
+			Screenshot.getscreenshot(driver);
+		}
+
 	}
-	
-	catch (Exception e) {
-      e.printStackTrace();
-		log.info("This test is Failed as : "+"Test123"+randomnumber+" is not created");
-      Screenshot.getscreenshot(driver);
+
+	@AfterTest
+	public void teardown() {
+
+		driver.close();
+		driver = null;
+
 	}
 
-}
+	@DataProvider
+	public Object[][] getData() {
 
+		Object[][] data = new Object[1][2];
 
-@AfterTest
-public void teardown()
-{
-	
-	driver.close();
-	driver=null;
-	
-}
+		data[0][0] = "meridian";
+		data[0][1] = "Demo@09123";
+		return data;
 
-
-@DataProvider
-public Object[][] getData()
-{
-	
-	Object[][] data=new Object[1][2];
-	
-	data[0][0]="meridian";
-	data[0][1]="Demo";
-	return data;
-	
-}
+	}
 
 }

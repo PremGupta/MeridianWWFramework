@@ -9,13 +9,13 @@
     <classes>
       <class name="MeridianPackages.AnnouncementsFullCode">
         <methods>
-          <include name="AnnouncementCreation"/>
           <include name="teardown"/>
+          <include name="AnnouncementCreation_Fullcode"/>
         </methods>
       </class> <!-- MeridianPackages.AnnouncementsFullCode -->
       <class name="MeridianPackages.Announcements">
         <methods>
-          <include name="AnnouncementCreation" invocation-numbers="0"/>
+          <include name="AnnouncementCreation_Framework" invocation-numbers="0"/>
           <include name="teardown"/>
           <include name="initialize"/>
         </methods>

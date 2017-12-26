@@ -12,7 +12,7 @@
 
 <property name="ws.home" value="${basedir}"/>
 
-<property name="ws.jars" value="C:\Users\Prem\Meridian\Jars"/>
+<property name="ws.jars" value="E:\WhereverWeb\MeridianWW\Jars"/>
 
 <property name="test.dest" value="${ws.home}/build"/>
 
