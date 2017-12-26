@@ -44,7 +44,7 @@ public class Announcements extends base{
 	}
 	@Test(dataProvider="getData")
 	
-	public void AnnouncementCreation(String Username,String Password) throws IOException, InterruptedException
+	public void AnnouncementCreation_Framework(String Username,String Password) throws IOException, InterruptedException
 	{
      
 		try 
@@ -91,10 +91,14 @@ public class Announcements extends base{
 		Screenshot.getscreenshot(driver);
 		assertEquals(driver.findElement(By.xpath("//*[@id=\'announcement\']/div/div/div[1]/ul/li[1]/span")).getText(), "Test123"+randomnumber);
 	    System.out.println("Test123"+randomnumber);
+	    log.info("This test is passed as : "+"Test123"+randomnumber+" is created");
 	    
 		Thread.sleep(5000);
-        ap.Approved().click();
-	    log.info("This test is passed as : "+"Test123"+randomnumber+" is created");
+        //ap.Approved().click();
+		WebElement Approved=ap.Approved();
+		act1.moveToElement(Approved).build().perform();
+	    act1.moveToElement(Approved).click();
+	    log.info("This test is passed as : "+"Test123"+randomnumber+" is Approved");
 	}
 	
 	catch (Exception e) {

@@ -23,12 +23,12 @@ public class Screenshot extends Announcements {
 	    System.out.println("Randome image name"); 
 	    System.out.println(Randomscreenshotname);
 	    
-	    FileUtils.copyFile(snapshot, new File("C:\\Users\\Prem\\Meridian\\Screenshot\\"+Randomscreenshotname));
+	    FileUtils.copyFile(snapshot, new File("E:\\WhereverWeb\\MeridianWW\\Screenshot\\"+Randomscreenshotname));
 	    System.out.println("screenshot taken");
 	    }
 	 
 	 	public static void failedStepsScreenshot(WebDriver driver) throws IOException {
 	 		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-	 		FileUtils.copyFile(src, new File("C:\\Users\\Prem\\Meridian\\FailedStepsScreenshots\\"+"Failed"+randomnumber+"screenshot.png"));
+	 		FileUtils.copyFile(src, new File("E:\\WhereverWeb\\MeridianWW\\FailedStepsScreenshots\\"+"Failed"+randomnumber+"screenshot.png"));
 	 	}
 }

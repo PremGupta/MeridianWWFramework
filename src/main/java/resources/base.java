@@ -23,7 +23,7 @@ public WebDriver initializeDriver() throws IOException
 {
 	
  prop= new Properties();
-FileInputStream fis=new FileInputStream("C:\\Users\\Prem\\Meridian\\src\\main\\java\\resources\\data.properties");
+FileInputStream fis=new FileInputStream("E:\\WhereverWeb\\MeridianWW\\src\\main\\java\\resources\\data.properties");
 
 prop.load(fis);
 String browserName=prop.getProperty("browser");
@@ -31,19 +31,19 @@ System.out.println(browserName);
 
 if(browserName.equals("chrome"))
 {
-	System.setProperty("webdriver.chrome.driver", "C:\\Users\\Prem\\Meridian\\Jars\\chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver", "E:\\WhereverWeb\\MeridianWW\\Jars\\chromedriver.exe");
 	driver= new ChromeDriver();
 		//execute in chrome driver
 	
 }
 else if (browserName.equals("firefox"))
 {
-	System.setProperty("webdriver.gecko.driver", "C:\\Users\\Prem\\Meridian\\Jars\\geckodriver.exe");
+	System.setProperty("webdriver.gecko.driver", "E:\\WhereverWeb\\MeridianWW\\Jars\\geckodriver.exe");
 	 driver= new FirefoxDriver();
 }
 else if (browserName.equals("IE"))
 {
-	System.setProperty("webdriver.ie.driver", "C:\\Users\\Prem\\Meridian\\Jars\\IEDriverServer.exe");
+	System.setProperty("webdriver.ie.driver", "E:\\WhereverWeb\\MeridianWW\\Jars\\IEDriverServer.exe");
 	 driver= new InternetExplorerDriver();
 }
 

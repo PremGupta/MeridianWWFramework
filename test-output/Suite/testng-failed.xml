@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <listeners>
     <listener class-name="MeridianPackages.listeners"/>
     <listener class-name="resources.ExtentReporterNG"/>
   </listeners>
-  <test name="Validating User login(failed)">
+  <test name="Announcements Creation(failed)">
     <classes>
       <class name="MeridianPackages.AnnouncementsFullCode">
         <methods>
@@ -13,6 +13,13 @@
           <include name="teardown"/>
         </methods>
       </class> <!-- MeridianPackages.AnnouncementsFullCode -->
+      <class name="MeridianPackages.Announcements">
+        <methods>
+          <include name="AnnouncementCreation" invocation-numbers="0"/>
+          <include name="teardown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- MeridianPackages.Announcements -->
     </classes>
-  </test> <!-- Validating User login(failed) -->
+  </test> <!-- Announcements Creation(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -41,13 +41,13 @@ public class AnnouncementsFullCode{
 	
 	@Test()
 	
-	public void AnnouncementCreation() throws IOException, InterruptedException
+	public void AnnouncementCreation_Fullcode() throws IOException, InterruptedException
 	{ 
      
 		try 
 		{
 			    
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Prem\\Meridian\\Jars\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "E:\\WhereverWeb\\MeridianWW\\Jars\\chromedriver.exe");
 		driver = new ChromeDriver();
 		
         /*System.setProperty("webdriver.gecko.driver", "C:\\Users\\Prem\\Meridian\\Jars\\geckodriver.exe");
@@ -98,10 +98,13 @@ public class AnnouncementsFullCode{
 		Screenshot.getscreenshot(driver);
 		assertEquals(driver.findElement(By.xpath("//*[@id=\'announcement\']/div/div/div[1]/ul/li[1]/span")).getText(), "Test123"+randomnumber);
 	    System.out.println("Test123"+randomnumber);
+	    log.info("This test is passed as : "+"Test123"+randomnumber+" is created");
 	    
 		Thread.sleep(5000);
-	    driver.findElement(By.xpath("//input[@value='Approved']")).click();
-	    log.info("This test is passed as : "+"Test123"+randomnumber+" is created");
+		WebElement Approved=driver.findElement(By.xpath("//input[@value='Approved']"));
+		act1.moveToElement(Approved).build().perform();
+	    act1.moveToElement(Approved).click();
+	    log.info("This test is passed as : "+"Test123"+randomnumber+" is Approved");
 	}
 	
 	catch (Exception e) {

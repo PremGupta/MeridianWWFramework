@@ -1,6 +1,0 @@
-19:15:35.735 [main] INFO  resources.base - This test is passed as : Test123121 is created
-19:17:17.394 [main] INFO  resources.base - This test is passed as : Test1236621 is created
-23:09:19.016 [main] INFO  resources.base - This test is passed as : Test1235244 is created
-23:11:13.175 [main] INFO  resources.base - This test is passed as : Test1237068 is created
-23:19:19.192 [main] INFO  resources.base - This test is Failed as : Test1230 is not created
-23:22:03.287 [main] INFO  resources.base - This test is Failed as : Test1230 is not created

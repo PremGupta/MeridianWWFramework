@@ -1,5 +1,2 @@
-23:24:42.333 [main] INFO  resources.base - This test is Failed as : Test1230 is not created
-23:39:22.686 [main] INFO  resources.base - This test is Failed as : Test1231815 is not created
-23:44:37.477 [main] INFO  resources.base - This test is Failed as : Test1237964 is not created
-23:49:31.357 [main] INFO  resources.base - This test is Failed as : Test1231140 is not created
-00:06:12.611 [main] INFO  resources.base - This test is Failed as : Test1230 is not created
+12:12:41.456 [main] INFO  resources.base - This test is passed as : Test1233675 is created
+12:14:16.745 [main] INFO  resources.base - This test is passed as : Test1236456 is created
