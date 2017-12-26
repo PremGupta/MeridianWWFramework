@@ -78,7 +78,7 @@ public class AnnouncementsFullCode {
 			driver.findElement(By.xpath("(//a[text()='Announcements'])[2]")).click();
 
 			driver.findElement(By.xpath("//input[@value='Create New Announcement']")).click();
-			randomnumber = (int) (10 + Math.random() * ((10000 - 1) + 1));
+			randomnumber = (int) (10 + Math.random() * ((1000 - 1) + 1));
 			driver.findElement(By.xpath("//*[@id='sTitle']")).sendKeys("Test123" + randomnumber);
 			driver.findElement(By.id("dFromDate")).click();
 			driver.findElement(By
