@@ -2,22 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="324794" started-at="2017-12-26T20:11:01Z" finished-at="2017-12-26T20:16:26Z">
+  <suite name="Suite" duration-ms="254650" started-at="2017-12-28T14:35:48Z" finished-at="2017-12-28T14:40:03Z">
     <groups>
     </groups>
-    <test name="Announcements Creation" duration-ms="324794" started-at="2017-12-26T20:11:01Z" finished-at="2017-12-26T20:16:26Z">
-      <class name="MeridianPackages.AnnouncementsFullCode">
-        <test-method status="PASS" signature="AnnouncementCreation_Fullcode()[pri:0, instance:MeridianPackages.AnnouncementsFullCode@33aeca0b]" name="AnnouncementCreation_Fullcode" duration-ms="176975" started-at="2017-12-27T01:43:29Z" finished-at="2017-12-27T01:46:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AnnouncementCreation_Fullcode -->
-      </class> <!-- MeridianPackages.AnnouncementsFullCode -->
+    <test name="Announcements Creation" duration-ms="254650" started-at="2017-12-28T14:35:48Z" finished-at="2017-12-28T14:40:03Z">
       <class name="MeridianPackages.Announcements">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:MeridianPackages.Announcements@5c18016b]" name="initialize" is-config="true" duration-ms="4001" started-at="2017-12-27T01:41:01Z" finished-at="2017-12-27T01:41:05Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:MeridianPackages.Announcements@55740540]" name="initialize" is-config="true" duration-ms="2702" started-at="2017-12-28T20:05:48Z" finished-at="2017-12-28T20:05:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="AnnouncementCreation_Framework(java.lang.String, java.lang.String)[pri:0, instance:MeridianPackages.Announcements@5c18016b]" name="AnnouncementCreation_Framework" duration-ms="143353" started-at="2017-12-27T01:41:05Z" data-provider="getData" finished-at="2017-12-27T01:43:29Z">
+        <test-method status="PASS" signature="AnnouncementCreation_Framework(java.lang.String, java.lang.String)[pri:0, instance:MeridianPackages.Announcements@55740540]" name="AnnouncementCreation_Framework" duration-ms="115068" started-at="2017-12-28T20:05:51Z" data-provider="getData" finished-at="2017-12-28T20:07:46Z">
           <params>
             <param index="0">
               <value>
@@ -33,15 +27,21 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AnnouncementCreation_Framework -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:MeridianPackages.Announcements@5c18016b]" name="teardown" is-config="true" duration-ms="206" started-at="2017-12-27T01:46:26Z" finished-at="2017-12-27T01:46:26Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:MeridianPackages.Announcements@55740540]" name="teardown" is-config="true" duration-ms="2084" started-at="2017-12-28T20:09:58Z" finished-at="2017-12-28T20:10:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:MeridianPackages.AnnouncementsFullCode@33aeca0b]" name="teardown" is-config="true" duration-ms="220" started-at="2017-12-27T01:46:26Z" finished-at="2017-12-27T01:46:26Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:MeridianPackages.AnnouncementsFullCode@60015ef5]" name="teardown" is-config="true" duration-ms="2353" started-at="2017-12-28T20:10:01Z" finished-at="2017-12-28T20:10:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- MeridianPackages.Announcements -->
+      <class name="MeridianPackages.AnnouncementsFullCode">
+        <test-method status="PASS" signature="AnnouncementCreation_Fullcode()[pri:0, instance:MeridianPackages.AnnouncementsFullCode@60015ef5]" name="AnnouncementCreation_Fullcode" duration-ms="132427" started-at="2017-12-28T20:07:46Z" finished-at="2017-12-28T20:09:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AnnouncementCreation_Fullcode -->
+      </class> <!-- MeridianPackages.AnnouncementsFullCode -->
     </test> <!-- Announcements Creation -->
   </suite> <!-- Suite -->
 </testng-results>

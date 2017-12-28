@@ -31,7 +31,7 @@ import resources.base;
 public class Announcements extends base {
 
 	public static WebDriver driver;
-	public static int randomnumber=0;
+	public static int randomnumber = 0;
 
 	public static Logger log = LogManager.getLogger(base.class.getName());
 
@@ -77,23 +77,23 @@ public class Announcements extends base {
 			ap.SelectCheckbox().click();
 
 			Thread.sleep(10000);
+
 			WebElement iframeElement = ap.IFrame();
 			driver.switchTo().frame(iframeElement);
-
 			driver.findElement(By.xpath("html/body/p")).click();
 			act1.moveToElement(driver.findElement(By.xpath("html/body/p"))).build().perform();
 			act1.doubleClick(driver.findElement(By.xpath("html/body/p"))).sendKeys("shhdshaas").build().perform();
-
 			driver.switchTo().defaultContent();
+
 			ap.Submit().click();
 
 			Thread.sleep(5000);
-			Screenshot.getscreenshot(driver);
 			assertEquals(
 					driver.findElement(By.xpath("//*[@id=\'announcement\']/div/div/div[1]/ul/li[1]/span")).getText(),
 					"Test123" + randomnumber);
 			System.out.println("Test123" + randomnumber);
 			log.info("This test is passed as : " + "Test123" + randomnumber + " is created");
+			Screenshot.getscreenshot(driver, randomnumber);
 
 			Thread.sleep(5000);
 			WebElement Approved = ap.Approved();
@@ -104,8 +104,8 @@ public class Announcements extends base {
 
 		catch (Exception e) {
 			e.printStackTrace();
-			log.info("This test is Failed as : " + "Test123" + randomnumber + " is not created");
-			Screenshot.getscreenshot(driver);
+			log.info("This test is Failed as : " + "Test123" + randomnumber + " is not created as Failed");
+			Screenshot.failedStepsScreenshot(driver, randomnumber);
 		}
 
 	}

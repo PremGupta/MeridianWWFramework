@@ -35,7 +35,7 @@ import resources.base;
 public class AnnouncementsFullCode {
 
 	public static WebDriver driver;
-	public static int randomnumber=0;
+	public static int randomnumber = 0;
 
 	public static Logger log = LogManager.getLogger(base.class.getName());
 
@@ -45,19 +45,19 @@ public class AnnouncementsFullCode {
 
 		try {
 
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Prem\\Meridian\\Jars\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "E:\\WhereverWeb\\MeridianWW\\Jars\\chromedriver.exe");
 			driver = new ChromeDriver();
 
 			/*
 			 * System.setProperty("webdriver.gecko.driver",
-			 * "C:\\Users\\Prem\\Meridian\\Jars\\geckodriver.exe"); driver =
-			 * new FirefoxDriver();
+			 * "E:\\WhereverWeb\\MeridianWW\\Jars\\geckodriver.exe"); driver
+			 * =new FirefoxDriver();
 			 */
 
 			/*
 			 * System.setProperty("webdriver.ie.driver",
-			 * "C:\\Users\\Prem\\Meridian\\Jars\\IEDriverServer.exe"); driver
-			 * = new InternetExplorerDriver();
+			 * "E:\\WhereverWeb\\MeridianWW\\Jars\\IEDriverServer.exe"); driver=
+			 * new InternetExplorerDriver();
 			 */
 			driver.get("https://demosite.meridinet.com/template/login.html");
 
@@ -93,22 +93,22 @@ public class AnnouncementsFullCode {
 			Thread.sleep(10000);
 			act1.moveToElement(driver.findElement(By.xpath(".//div[@id='cke_1_contents']/iframe"))).build().perform();
 			WebElement iframeElement = driver.findElement(By.xpath(".//div[@id='cke_1_contents']/iframe"));
-			driver.switchTo().frame(iframeElement);
 
+			driver.switchTo().frame(iframeElement);
 			driver.findElement(By.xpath("html/body/p")).click();
 			act1.moveToElement(driver.findElement(By.xpath("html/body/p"))).build().perform();
 			act1.doubleClick(driver.findElement(By.xpath("html/body/p"))).sendKeys("shhdshaas").build().perform();
-
 			driver.switchTo().defaultContent();
+
 			driver.findElement(By.xpath("//button[@id='submit']")).click();
 
 			Thread.sleep(5000);
-			Screenshot.getscreenshot(driver);
 			assertEquals(
 					driver.findElement(By.xpath("//*[@id=\'announcement\']/div/div/div[1]/ul/li[1]/span")).getText(),
 					"Test123" + randomnumber);
 			System.out.println("Test123" + randomnumber);
 			log.info("This test is passed as : " + "Test123" + randomnumber + " is created");
+			Screenshot.getscreenshot(driver, randomnumber);
 
 			Thread.sleep(5000);
 			WebElement Approved = driver.findElement(By.xpath("//input[@value='Approved']"));
@@ -118,8 +118,8 @@ public class AnnouncementsFullCode {
 		}
 
 		catch (Exception e) {
-			Screenshot.failedStepsScreenshot(driver);
-			log.info("This test is Failed as : " + "Test123" + randomnumber + " is not created");
+			Screenshot.failedStepsScreenshot(driver, randomnumber);
+			log.info("This test is Failed as : " + "Test123" + randomnumber + " is not created as Failed");
 			e.printStackTrace();
 
 		}
