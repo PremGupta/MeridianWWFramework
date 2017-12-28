@@ -26,6 +26,11 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
 import ObjectRepository_Announcements.AnnouncementsPage;
 import ObjectRepository_Announcements.HomePage;
 import ObjectRepository_Announcements.loginPage;
@@ -34,8 +39,11 @@ import resources.base;
 
 public class AnnouncementsFullCode {
 
+	public ExtentReports report;
+	public ExtentTest logger;
+
 	public static WebDriver driver;
-	public static int randomnumber = 0;
+	public static int randomnumber;
 
 	public static Logger log = LogManager.getLogger(base.class.getName());
 
@@ -43,20 +51,23 @@ public class AnnouncementsFullCode {
 
 	public void AnnouncementCreation_Fullcode() throws IOException, InterruptedException {
 
+		report=new ExtentReports("./Reports/ExecutionReport_AnnouncementCreation_Fullcode.html");
+		logger=report.startTest("Start Testing: AnnouncementCreation_Fullcode");
+		
 		try {
 
-			System.setProperty("webdriver.chrome.driver", "E:\\WhereverWeb\\MeridianWW\\Jars\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Prem\\Meridian\\Jars\\chromedriver.exe");
 			driver = new ChromeDriver();
 
 			/*
 			 * System.setProperty("webdriver.gecko.driver",
-			 * "E:\\WhereverWeb\\MeridianWW\\Jars\\geckodriver.exe"); driver
+			 * "C:\\Users\\Prem\\Meridian\\Jars\\geckodriver.exe"); driver
 			 * =new FirefoxDriver();
 			 */
 
 			/*
 			 * System.setProperty("webdriver.ie.driver",
-			 * "E:\\WhereverWeb\\MeridianWW\\Jars\\IEDriverServer.exe"); driver=
+			 * "C:\\Users\\Prem\\Meridian\\Jars\\IEDriverServer.exe"); driver=
 			 * new InternetExplorerDriver();
 			 */
 			driver.get("https://demosite.meridinet.com/template/login.html");
@@ -115,17 +126,23 @@ public class AnnouncementsFullCode {
 			act1.moveToElement(Approved).build().perform();
 			act1.moveToElement(Approved).click();
 			log.info("This test is passed as : " + "Test123" + randomnumber + " is Approved");
+			logger.log(LogStatus.PASS, "Test Verified_AnnouncementCreation_Fullcode: PASSED");
+			report.endTest(logger);
+			report.flush();
 		}
 
 		catch (Exception e) {
 			Screenshot.failedStepsScreenshot(driver, randomnumber);
 			log.info("This test is Failed as : " + "Test123" + randomnumber + " is not created as Failed");
 			e.printStackTrace();
+			logger.log(LogStatus.FAIL, "Test Verified_AnnouncementCreation_Fullcode: FAILED");
+			report.endTest(logger);
+			report.flush();
 
 		}
-
 	}
-
+		
+	
 	@AfterTest
 	public void teardown() {
 

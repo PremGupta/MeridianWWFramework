@@ -23,7 +23,7 @@ public class Screenshot {
 		System.out.println("Randome image name");
 		System.out.println(Randomscreenshotname);
 
-		FileUtils.copyFile(snapshot, new File("E:\\WhereverWeb\\MeridianWW\\Screenshot\\" + Randomscreenshotname));
+		FileUtils.copyFile(snapshot, new File("C:\\Users\\Prem\\Meridian\\Screenshot\\" + Randomscreenshotname));
 		System.out.println("Verified Created Announcement");
 	}
 
@@ -37,7 +37,21 @@ public class Screenshot {
 		System.out.println(Randomscreenshotname);
 
 		FileUtils.copyFile(src,
-				new File("E:\\WhereverWeb\\MeridianWW\\FailedStepsScreenshots\\" + "Failed" + Randomscreenshotname));
+				new File("C:\\Users\\Prem\\Meridian\\FailedStepsScreenshots\\" + "Failed" + Randomscreenshotname));
+
+	}
+	
+	public static void AppCloseScreenshot(WebDriver driver, int randomNumber) throws IOException {
+		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+		String screenshotname = "Test123";
+		String filetype = ".png";
+		String Randomscreenshotname = screenshotname + randomNumber + filetype;
+		System.out.println("Failed script screenshot taken");
+		System.out.println(Randomscreenshotname);
+
+		FileUtils.copyFile(src,
+				new File("C:\\Users\\Prem\\Meridian\\FailedStepsScreenshots\\" + "Failed" + Randomscreenshotname));
 
 	}
 }
