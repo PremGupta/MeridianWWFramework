@@ -184,6 +184,7 @@
 							<receivers>
 								<!-- To Email address -->
 								<receiver>premgupta2604@gmail.com</receiver>
+								<receiver>prem2604@gmail.com</receiver>
 							</receivers>
 
 							<fileSets>
