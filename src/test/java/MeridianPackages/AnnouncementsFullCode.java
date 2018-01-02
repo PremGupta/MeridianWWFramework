@@ -51,23 +51,23 @@ public class AnnouncementsFullCode {
 
 	public void AnnouncementCreation_Fullcode() throws IOException, InterruptedException {
 
-		report=new ExtentReports("./Reports/ExecutionReport_AnnouncementCreation_Fullcode.html");
-		logger=report.startTest("Start Testing: AnnouncementCreation_Fullcode");
-		
+		report = new ExtentReports("./Reports/ExecutionReport_AnnouncementCreation_Fullcode.html");
+		logger = report.startTest("Start Testing: AnnouncementCreation_Fullcode");
+
 		try {
 
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Prem\\Meridian\\Jars\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "E:\\WhereverWeb\\MeridianWW\\Jars\\chromedriver.exe");
 			driver = new ChromeDriver();
 
 			/*
 			 * System.setProperty("webdriver.gecko.driver",
-			 * "C:\\Users\\Prem\\Meridian\\Jars\\geckodriver.exe"); driver
+			 * "E:\\WhereverWeb\\MeridianWW\\Jars\\geckodriver.exe"); driver
 			 * =new FirefoxDriver();
 			 */
 
 			/*
 			 * System.setProperty("webdriver.ie.driver",
-			 * "C:\\Users\\Prem\\Meridian\\Jars\\IEDriverServer.exe"); driver=
+			 * "E:\\WhereverWeb\\MeridianWW\\Jars\\IEDriverServer.exe"); driver=
 			 * new InternetExplorerDriver();
 			 */
 			driver.get("https://demosite.meridinet.com/template/login.html");
@@ -141,8 +141,7 @@ public class AnnouncementsFullCode {
 
 		}
 	}
-		
-	
+
 	@AfterTest
 	public void teardown() {
 

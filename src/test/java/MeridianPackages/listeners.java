@@ -30,7 +30,7 @@ base b=new base();
 		//screenshot
 
 		try {
-			b.getScreenshot(result.getName());
+			b.getScreenshot(result.getName(), 0);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

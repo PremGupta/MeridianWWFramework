@@ -190,7 +190,7 @@
 							<fileSets>
 								<fileSet>
 									<!-- Report directory Path -->
-									<directory>C://Users//Prem//Meridian//Reports</directory>
+									<directory>E://WhereverWeb//MeridianWW//Reports</directory>
 									<includes>
 										<!-- Report file name -->
 										<include>ExecutionReport*.html</include>
