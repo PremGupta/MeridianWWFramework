@@ -49,51 +49,41 @@ public class Announcements extends base {
 		driver = initializeDriver();
 
 	}
+	
+	@Test()
 
-	@Test(dataProvider = "getData")
-
-	public void AnnouncementCreation_Framework(String Username, String Password)
+	public void AnnouncementCreation_Framework()
 			throws IOException, InterruptedException {
-
+		
 		report=new ExtentReports("./Reports/ExecutionReport_AnnouncementCreation_Framework.html");
 		logger=report.startTest("Start Testing: AnnouncementCreation_Framework");
 		
+		loginPage lp = new loginPage(driver);
+		HomePage hp = new HomePage(driver);
+		AnnouncementsPage ap = new AnnouncementsPage(driver);
+		
+		
 		try {
-			driver.get(prop.getProperty("url"));
-
-			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-			loginPage lp = new loginPage(driver);
-
-			lp.Username().sendKeys(Username);
-			lp.Password().sendKeys(Password);
-			lp.LoginButton().click();
-			HomePage hp = new HomePage(driver);
-			WebElement admin = driver
-					.findElement(By.xpath("//a[@class='dropdown-toggle has-submenu'][text()='Admin']"));
-			Actions act1 = new Actions(driver);
-			act1.moveToElement(admin).build().perform();
-			hp.Admin().click();
-			Thread.sleep(2000);
-			hp.Announcement().click();
-
-			AnnouncementsPage ap = new AnnouncementsPage(driver);
-			ap.CreateNewAnnouncement().click();
-			randomnumber = (int) (10 + Math.random() * ((10000 - 1) + 1));
-			ap.AnnouncementTitle().sendKeys("Test123" + randomnumber);
-			ap.FromDate().click();
-			ap.StartDate().click();
-			ap.ThruDate().click();
-			ap.EndDate().click();
-			ap.SelectCheckbox().click();
+			lp.EnterUname();
+			lp.EnterPassword();
+			lp.ClickLoginButton();
+			hp.ClickAdmin();
+			hp.ClickAnnouncement();
+			ap.ClickCreateNewAnnouncement();
+			ap.EnterAnnouncementTitle();
+			ap.ClickFromDate();
+			ap.SelectStartDate();
+			ap.ClickThruDate();
+			ap.SelectEndDate();
+			ap.SelectCheckbox();
 
 			Thread.sleep(10000);
 
 			WebElement iframeElement = ap.IFrame();
 			driver.switchTo().frame(iframeElement);
 			driver.findElement(By.xpath("html/body/p")).click();
-			act1.moveToElement(driver.findElement(By.xpath("html/body/p"))).build().perform();
-			act1.doubleClick(driver.findElement(By.xpath("html/body/p"))).sendKeys("shhdshaas").build().perform();
+			//act1.moveToElement(driver.findElement(By.xpath("html/body/p"))).build().perform();
+		//	act1.doubleClick(driver.findElement(By.xpath("html/body/p"))).sendKeys("shhdshaas").build().perform();
 			driver.switchTo().defaultContent();
 
 			ap.Submit().click();
@@ -108,8 +98,8 @@ public class Announcements extends base {
 
 			Thread.sleep(5000);
 			WebElement Approved = ap.Approved();
-			act1.moveToElement(Approved).build().perform();
-			act1.moveToElement(Approved).click();
+			//act1.moveToElement(Approved).build().perform();
+			//act1.moveToElement(Approved).click();
 			log.info("This test is passed as : " + "Test123" + randomnumber + " is Approved");
 			logger.log(LogStatus.PASS, "Test Verified_AnnouncementCreation_Framework: PASSED");
 			report.endTest(logger);
@@ -136,15 +126,5 @@ public class Announcements extends base {
 
 	}
 
-	@DataProvider
-	public Object[][] getData() {
-
-		Object[][] data = new Object[1][2];
-
-		data[0][0] = "meridian";
-		data[0][1] = "Demo@09123";
-		return data;
-
-	}
 
 }

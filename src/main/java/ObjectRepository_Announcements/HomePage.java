@@ -18,16 +18,6 @@ public class HomePage {
 		this.driver = driver;
 	}
 
-	/*
-	 * public void Awards() {
-	 * 
-	 * Actions act=new Actions(driver);
-	 * //act.moveToElement((WebElement)awards).build().perform();
-	 * act.moveToElement((WebElement) awards).build().perform();
-	 * 
-	 * }
-	 */
-
 	public WebElement AwardsCentral() {
 		return driver.findElement(awardscentral);
 	}
@@ -38,6 +28,18 @@ public class HomePage {
 
 	public WebElement Announcement() {
 		return driver.findElement(announcement);
+	}
+	
+	public void ClickAdmin(){
+		WebElement admin = driver
+				.findElement(By.xpath("//a[@class='dropdown-toggle has-submenu'][text()='Admin']"));
+		Actions act1 = new Actions(driver);
+		act1.moveToElement(admin).build().perform();
+		Admin().click();
+	}
+	
+	public void ClickAnnouncement(){
+		Announcement().click();
 	}
 
 }

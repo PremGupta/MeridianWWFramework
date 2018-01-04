@@ -61,7 +61,7 @@ public class AnnouncementsPage {
 		return driver.findElement(endDate);
 	}
 
-	public WebElement SelectCheckbox() {
+	public WebElement ClickCheckbox() {
 		return driver.findElement(selectCheckbox);
 	}
 
@@ -75,5 +75,34 @@ public class AnnouncementsPage {
 
 	public WebElement Approved() {
 		return driver.findElement(approved);
+	}
+	
+	public void ClickCreateNewAnnouncement(){
+		CreateNewAnnouncement().click();
+	}
+	
+	public void EnterAnnouncementTitle(){
+		int randomnumber = (int) (10 + Math.random() * ((10000 - 1) + 1));
+		AnnouncementTitle().sendKeys("Test123" + randomnumber);
+	}
+	
+	public void ClickFromDate(){
+		FromDate().click();
+	}
+	
+	public void SelectStartDate(){
+		StartDate().click();
+	}
+	
+	public void ClickThruDate(){
+		ThruDate().click();
+	}
+	
+	public void SelectEndDate(){
+		EndDate().click();
+	}
+	
+	public void SelectCheckbox(){
+		ClickCheckbox().click();
 	}
 }
