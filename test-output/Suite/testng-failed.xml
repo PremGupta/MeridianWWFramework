@@ -7,13 +7,6 @@
   </listeners>
   <test name="Announcements Creation(failed)">
     <classes>
-      <class name="MeridianPackages.Announcements">
-        <methods>
-          <include name="AnnouncementCreation_Framework" invocation-numbers="0"/>
-          <include name="teardown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- MeridianPackages.Announcements -->
       <class name="MeridianPackages.AnnouncementsFullCode">
         <methods>
           <include name="teardown"/>

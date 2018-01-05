@@ -179,7 +179,7 @@
 
 							<!-- Email Authentication(USername and Password) -->
 							<mailuser>prem2604@gmail.com</mailuser>
-							<mailpassword>divya20792</mailpassword>
+							<mailpassword>@Pavitri2604#</mailpassword>
 
 							<receivers>
 								<!-- To Email address -->
@@ -190,7 +190,7 @@
 							<fileSets>
 								<fileSet>
 									<!-- Report directory Path -->
-									<directory>C://Users//Prem//Meridian//Reports</directory>
+									<directory>E://MeridianWWFramework//Reports</directory>
 									<includes>
 										<!-- Report file name -->
 										<include>ExecutionReport*.html</include>

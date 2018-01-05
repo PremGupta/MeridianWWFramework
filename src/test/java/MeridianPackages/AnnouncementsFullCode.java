@@ -2,38 +2,22 @@ package MeridianPackages;
 
 import static org.testng.Assert.assertEquals;
 
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.List;
-import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-
-import ObjectRepository_Announcements.AnnouncementsPage;
-import ObjectRepository_Announcements.HomePage;
-import ObjectRepository_Announcements.loginPage;
 
 import resources.base;
 
@@ -51,25 +35,14 @@ public class AnnouncementsFullCode {
 
 	public void AnnouncementCreation_Fullcode() throws IOException, InterruptedException {
 
-		report=new ExtentReports("./Reports/ExecutionReport_AnnouncementCreation_Fullcode.html");
-		logger=report.startTest("Start Testing: AnnouncementCreation_Fullcode");
-		
+		report = new ExtentReports("./Reports/ExecutionReport_AnnouncementCreation_Fullcode.html");
+		logger = report.startTest("Start Testing: AnnouncementCreation_Fullcode");
+
 		try {
 
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Prem\\Meridian\\Jars\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "E:\\WhereverWeb\\MeridianWW\\Jars\\chromedriver.exe");
 			driver = new ChromeDriver();
 
-			/*
-			 * System.setProperty("webdriver.gecko.driver",
-			 * "C:\\Users\\Prem\\Meridian\\Jars\\geckodriver.exe"); driver
-			 * =new FirefoxDriver();
-			 */
-
-			/*
-			 * System.setProperty("webdriver.ie.driver",
-			 * "C:\\Users\\Prem\\Meridian\\Jars\\IEDriverServer.exe"); driver=
-			 * new InternetExplorerDriver();
-			 */
 			driver.get("https://demosite.meridinet.com/template/login.html");
 
 			driver.manage().window().maximize();
@@ -141,8 +114,7 @@ public class AnnouncementsFullCode {
 
 		}
 	}
-		
-	
+
 	@AfterTest
 	public void teardown() {
 

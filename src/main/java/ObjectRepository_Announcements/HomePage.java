@@ -38,8 +38,14 @@ public class HomePage {
 		Admin().click();
 	}
 	
-	public void ClickAnnouncement(){
+	public void ClickAnnouncementPage(){
 		Announcement().click();
+	}
+	
+	public void AnnouncementCreation()
+	{
+		ClickAdmin();
+		ClickAnnouncementPage();
 	}
 
 }
