@@ -179,7 +179,7 @@
 
 							<!-- Email Authentication(USername and Password) -->
 							<mailuser>prem2604@gmail.com</mailuser>
-							<mailpassword>@Pavitri2604#</mailpassword>
+							<mailpassword></mailpassword>
 
 							<receivers>
 								<!-- To Email address -->

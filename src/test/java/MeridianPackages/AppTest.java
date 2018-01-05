@@ -1,7 +1,5 @@
 package MeridianPackages;
 
-import MeridianPackages.Announcements;
-import MeridianPackages.AnnouncementsFullCode;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
