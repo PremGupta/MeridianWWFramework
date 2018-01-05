@@ -14,11 +14,7 @@ public class LoginPage extends base {
 	public Properties prop;
 
 	By username = By.id("username");
-	// String uname="meridian";
-
 	By password = By.id("password");
-	// String pass="Demo@09123";
-
 	By loginButton = By.xpath("//input[@value='Login']");
 
 	public LoginPage(WebDriver driver) {
