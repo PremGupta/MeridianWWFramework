@@ -25,7 +25,7 @@ base b=new base();
 	public void onTestFailure(ITestResult result) {
 
 		try {
-			b.getScreenshot(result.getName());
+			b.getFailedScreenshot(result.getName());
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

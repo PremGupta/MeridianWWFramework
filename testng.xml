@@ -9,7 +9,7 @@
 	<test name="Announcements Creation">
 		<classes>
 			<class name="MeridianPackages.Announcements" />
-			<class name="MeridianPackages.AnnouncementsFullCode" />
+        <!--<class name="MeridianPackages.AnnouncementsFullCode" /> -->
 		</classes>
 	</test>
 </suite>

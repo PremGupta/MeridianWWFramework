@@ -2,11 +2,15 @@ package MeridianPackages;
 
 import java.io.IOException;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
 import ObjectRepository_Announcements.AnnouncementsPage;
 import ObjectRepository_Announcements.HomePage;
@@ -40,9 +44,8 @@ public class Announcements extends base {
 		}
 
 		catch (Exception e) {
-			Screenshot.failedStepsScreenshot(driver, annPage.randomnumber);
-			LogForFail();
-			e.printStackTrace();
+		    Screenshot.failedStepsScreenshot(driver, annPage.randomnumber);
+			LogForFail(e);
 		}
 
 	}

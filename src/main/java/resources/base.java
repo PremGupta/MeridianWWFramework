@@ -20,14 +20,12 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-import MeridianPackages.Screenshot;
-
 public class base {
 
 	public static WebDriver driver;
 	public Properties prop;
-	public ExtentReports report;
-	public ExtentTest logger;
+	public static ExtentReports report;
+	public static ExtentTest logger;
 	public static Logger log = LogManager.getLogger(base.class.getName());
 
 	public WebDriver initializeDriver() throws IOException {
@@ -73,16 +71,17 @@ public class base {
 		report.flush();
 	}
 
-	public void LogForFail() {
+	public static void LogForFail(Exception e) {
 		log.info("This test is Failed as : Announcement is not created as Failed");
 		logger.log(LogStatus.FAIL, "Test Verified_AnnouncementCreation_Framework: FAILED");
+		logger.log(LogStatus.FAIL, e.getMessage());
 		report.endTest(logger);
 		report.flush();
 	}
 
-	public void getScreenshot(String result) throws IOException {
+	public void getFailedScreenshot(String result) throws IOException {
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(src,
-				new File("E:\\MeridianWWFramework\\FailedStepsScreenshots\\" + result + "screenshot.png"));
+		//FileUtils.copyFile(src, new File("./FailedStepsScreenshots\\" + result + ".png"));
 	}
+
 }
