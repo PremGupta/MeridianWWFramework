@@ -15,10 +15,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
+
+import MeridianPackages.Screenshot;
+import ObjectRepository_Announcements.AnnouncementsPage;
+import ObjectRepository_Announcements.HomePage;
+import ObjectRepository_Announcements.LoginPage;
+import ObjectRepository_Announcements.LogoutPage;
 
 public class base {
 
@@ -28,6 +38,12 @@ public class base {
 	public static ExtentTest logger;
 	public static Logger log = LogManager.getLogger(base.class.getName());
 
+	protected LoginPage loginPage;
+	protected HomePage homePage;
+	protected AnnouncementsPage annPage;
+	protected LogoutPage logoutPage;
+
+	@BeforeTest
 	public WebDriver initializeDriver() throws IOException {
 
 		prop = new Properties();
@@ -59,11 +75,20 @@ public class base {
 		}
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+		loginPage = new LoginPage(driver);
+		homePage = new HomePage(driver);
+		annPage = new AnnouncementsPage(driver);
+		logoutPage = new LogoutPage(driver);
+
 		return driver;
 
 	}
 
-	public void LogForPass() {
+
+	public void LogForPass(String name) {
+		report = new ExtentReports("./Reports/ExecutionReport_" + name + ".html");
+		logger = report.startTest("Start Testing: " + name);
 		log.info("This test is passed as : Announcement is Created");
 		log.info("This test is passed as : Announcement is Approved");
 		logger.log(LogStatus.PASS, "Test Verified_AnnouncementCreation_Framework: PASSED");
@@ -71,7 +96,8 @@ public class base {
 		report.flush();
 	}
 
-	public static void LogForFail(Exception e) {
+	public static void LogForFail(Exception e) throws IOException {
+		Screenshot.failedStepsScreenshot(driver, AnnouncementsPage.randomnumber);
 		log.info("This test is Failed as : Announcement is not created as Failed");
 		logger.log(LogStatus.FAIL, "Test Verified_AnnouncementCreation_Framework: FAILED");
 		logger.log(LogStatus.FAIL, e.getMessage());
@@ -79,9 +105,18 @@ public class base {
 		report.flush();
 	}
 
+	@AfterTest
+	public void teardown() {
+
+		driver.close();
+		driver = null;
+
+	}
+	
 	public void getFailedScreenshot(String result) throws IOException {
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		//FileUtils.copyFile(src, new File("./FailedStepsScreenshots\\" + result + ".png"));
+		// FileUtils.copyFile(src, new File("./FailedStepsScreenshots\\" +
+		// result + ".png"));
 	}
 
 }

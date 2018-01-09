@@ -1,5 +1,7 @@
 package ObjectRepository_Announcements;
 
+import static org.testng.Assert.assertEquals;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -59,5 +61,9 @@ public class LoginPage extends base {
 		EnterUname();
 		EnterPassword();
 		ClickLoginButton();
+	}
+	
+	public void VerifyLandedOnHomePage(){
+		assertEquals(driver.findElement(By.xpath("//h1[text()='Welcome']")).getText(), "Welcome");
 	}
 }

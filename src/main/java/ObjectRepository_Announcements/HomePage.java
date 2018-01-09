@@ -1,5 +1,7 @@
 package ObjectRepository_Announcements;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -30,7 +32,8 @@ public class HomePage {
 		return driver.findElement(announcement);
 	}
 	
-	public void ClickAdmin(){
+	public void ClickAdmin() throws InterruptedException{
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		WebElement admin = driver
 				.findElement(By.xpath("//a[@class='dropdown-toggle has-submenu'][text()='Admin']"));
 		Actions act1 = new Actions(driver);
@@ -39,10 +42,11 @@ public class HomePage {
 	}
 	
 	public void ClickAnnouncementPage(){
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		Announcement().click();
 	}
 	
-	public void AnnouncementCreation()
+	public void AnnouncementCreation() throws InterruptedException
 	{
 		ClickAdmin();
 		ClickAnnouncementPage();
