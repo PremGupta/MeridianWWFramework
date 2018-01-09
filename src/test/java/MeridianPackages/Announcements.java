@@ -24,14 +24,18 @@ public class Announcements extends base {
 		}
 	}
 
-	@Test(dependsOnMethods = { "LoginFlow" })
+	@Test()
 	public void AnnouncementCreation() throws IOException, InterruptedException {
 
-		try {
-			loginPage.Login();
-			loginPage.VerifyLandedOnHomePage();
+		try {		
+			
+			int randomnumber = (int) (10 + Math.random() * ((10000 - 1) + 1));
+			String announcementName =  "Test123" + randomnumber;
+			loginPage.Login();			
 			homePage.AnnouncementCreation();
-			annPage.CreateAnnouncement();
+			annPage.CreateAnnouncement(announcementName);			
+			//annPage.GotoAnnouncementListingPage();
+			annPage.VerifyAnnouncement(announcementName);
 			logoutPage.ClickLogoutButton();
 			LogForPass(this.getClass().getName());
 		}

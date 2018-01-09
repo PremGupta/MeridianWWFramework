@@ -44,7 +44,7 @@ public class base {
 	protected LogoutPage logoutPage;
 
 	@BeforeTest
-	public WebDriver initializeDriver() throws IOException {
+	public void initializeDriver() throws IOException {
 
 		prop = new Properties();
 		FileInputStream fis = new FileInputStream("./data.properties");
@@ -80,15 +80,11 @@ public class base {
 		homePage = new HomePage(driver);
 		annPage = new AnnouncementsPage(driver);
 		logoutPage = new LogoutPage(driver);
-
-		return driver;
-
 	}
-
 
 	public void LogForPass(String name) {
 		report = new ExtentReports("./Reports/ExecutionReport_" + name + ".html");
-		logger = report.startTest("Start Testing: " + name);
+		logger = report.startTest(name);
 		log.info("This test is passed as : Announcement is Created");
 		log.info("This test is passed as : Announcement is Approved");
 		logger.log(LogStatus.PASS, "Test Verified_AnnouncementCreation_Framework: PASSED");
@@ -97,7 +93,7 @@ public class base {
 	}
 
 	public static void LogForFail(Exception e) throws IOException {
-		Screenshot.failedStepsScreenshot(driver, AnnouncementsPage.randomnumber);
+		Screenshot.failedStepsScreenshot(driver, "FailedCase");
 		log.info("This test is Failed as : Announcement is not created as Failed");
 		logger.log(LogStatus.FAIL, "Test Verified_AnnouncementCreation_Framework: FAILED");
 		logger.log(LogStatus.FAIL, e.getMessage());
@@ -107,10 +103,8 @@ public class base {
 
 	@AfterTest
 	public void teardown() {
-
 		driver.close();
 		driver = null;
-
 	}
 	
 	public void getFailedScreenshot(String result) throws IOException {

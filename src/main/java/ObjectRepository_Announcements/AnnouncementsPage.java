@@ -31,7 +31,7 @@ public class AnnouncementsPage {
 	By iFrame = By.xpath(".//div[@id='cke_1_contents']/iframe");
 	By submit = By.xpath("//button[@id='submit']");
 	By approved = By.xpath("//input[@value='Approved']");
-	public static int randomnumber = (int) (10 + Math.random() * ((10000 - 1) + 1));
+	
 
 	public AnnouncementsPage(WebDriver driver) {
 		this.driver = driver;
@@ -81,8 +81,8 @@ public class AnnouncementsPage {
 		CreateNewAnnouncement().click();
 	}
 
-	public void EnterAnnouncementTitle() {
-		AnnouncementTitle().sendKeys("Test123" + randomnumber);
+	public void EnterAnnouncementTitle(String title) {
+		AnnouncementTitle().sendKeys(title);
 	}
 
 	public void ClickFromDate() {
@@ -125,14 +125,20 @@ public class AnnouncementsPage {
 
 	public void WaitForApprovalToAppear() {
 		WebDriverWait wait = new WebDriverWait(driver, 15);
-		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(approved));
+		wait.until(ExpectedConditions.elementToBeClickable(approved));
 	}
 
-	public void VerifyAnnouncementCreated() throws IOException {
+	/*public void VerifyAnnouncementCreated() throws IOException {
 		assertEquals(driver.findElement(By.xpath("//*[@id=\'announcement\']/div/div/div[1]/ul/li[1]/span")).getText(),
 				"Test123" + randomnumber);
 		System.out.println("Test123" + randomnumber);
 		Screenshot.getscreenshot(driver, randomnumber);
+	}*/
+	
+	public void VerifyAnnouncement(String announcementName) throws IOException {
+		assertEquals(driver.findElement(By.xpath("//*[@id=\'announcement\']/div/div/div[1]/ul/li[1]/span")).getText(),
+				announcementName);		
+		Screenshot.getscreenshot(driver, announcementName);
 	}
 
 	public void ClickApprovalButton() {
@@ -142,9 +148,9 @@ public class AnnouncementsPage {
 		act1.moveToElement(Approved).click();
 	}
 
-	public void CreateAnnouncement() throws IOException {
+	public void CreateAnnouncement(String announcementName) throws IOException {
 		ClickCreateNewAnnouncement();
-		EnterAnnouncementTitle();
+		EnterAnnouncementTitle(announcementName);
 		ClickFromDate();
 		SelectStartDate();
 		ClickThruDate();
@@ -153,8 +159,13 @@ public class AnnouncementsPage {
 		WaitForFrameToAppear();
 		EnterTextIniFrameTextField();
 		ClickSubmitButton();
-		WaitForApprovalToAppear();
-		VerifyAnnouncementCreated();
+		WaitForApprovalToAppear();		
 		ClickApprovalButton();
 	}
+	
+	public void GotoAnnouncementListingPage()
+	{
+		driver.get("abc.html");
+	}
+	
 }
