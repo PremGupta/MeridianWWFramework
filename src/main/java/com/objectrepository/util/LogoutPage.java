@@ -1,20 +1,18 @@
-package ObjectRepository_Announcements;
+package com.objectrepository.util;
 
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import resources.base;
-
+import com.resources.util.base;
+ 
 public class LogoutPage extends base {
 	public Properties prop;
 
 	By logout = By.xpath("//a[text()='Logout']");
-	
+	WebDriver driver;
 	public LogoutPage(WebDriver driver) {
 		this.driver = driver;
 	}

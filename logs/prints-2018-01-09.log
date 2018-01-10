@@ -1,51 +1,54 @@
-14:06:24.437 [main] INFO  resources.base - This test is Failed as : Announcement is not created as Failed
-14:07:47.231 [main] INFO  resources.base - This test is passed as : Test1236169 is created
-14:07:52.572 [main] INFO  resources.base - This test is passed as : Test1236169 is Approved
-15:55:00.331 [main] INFO  resources.base - This test is Failed as : Announcement is not created as Failed
-15:57:48.580 [main] INFO  resources.base - This test is Failed as : Announcement is not created as Failed
-16:28:45.332 [main] INFO  resources.base - This test is passed as : Announcement is Created
-16:28:45.336 [main] INFO  resources.base - This test is passed as : Announcement is Approved
-16:32:23.032 [main] INFO  resources.base - This test is passed as : Announcement is Created
-16:32:23.036 [main] INFO  resources.base - This test is passed as : Announcement is Approved
-16:33:45.352 [main] INFO  resources.base - This test is passed as : Test1233934 is created
-16:33:50.726 [main] INFO  resources.base - This test is passed as : Test1233934 is Approved
-16:38:30.948 [main] INFO  resources.base - This test is passed as : Announcement is Created
-16:38:30.952 [main] INFO  resources.base - This test is passed as : Announcement is Approved
-16:39:47.064 [main] INFO  resources.base - This test is passed as : Test1237739 is created
-16:39:52.451 [main] INFO  resources.base - This test is passed as : Test1237739 is Approved
-17:19:35.340 [main] INFO  resources.base - This test is passed as : Announcement is Created
-17:19:35.345 [main] INFO  resources.base - This test is passed as : Announcement is Approved
-17:20:58.895 [main] INFO  resources.base - This test is Failed as : Test1230 is not created as Failed
-13:01:19.045 [main] INFO  resources.base - This test is Failed as : Announcement is not created as Failed
-13:15:50.076 [main] INFO  resources.base - This test is Failed as : Announcement is not created as Failed
-13:21:33.543 [main] INFO  resources.base - This test is Failed as : Announcement is not created as Failed
-14:00:23.382 [main] INFO  resources.base - This test is Failed as : Test1235085 is not created as Failed
-15:50:53.608 [main] INFO  resources.base - This test is Failed as : Announcement is not created as Failed
-15:55:20.043 [main] INFO  resources.base - This test is Failed as : Announcement is not created as Failed
-15:59:11.084 [main] INFO  resources.base - This test is Failed as : Announcement is not created as Failed
-16:10:02.772 [main] INFO  resources.base - This test is Failed as : Announcement is not created as Failed
-16:21:34.235 [main] INFO  resources.base - This test is passed as : Announcement is Created
-16:21:34.248 [main] INFO  resources.base - This test is passed as : Announcement is Approved
-16:21:34.535 [main] INFO  resources.base - This test is Failed as : Announcement is not created as Failed
-16:46:47.469 [main] INFO  resources.base - This test is Failed as : Announcement is not created as Failed
-16:53:51.188 [main] INFO  resources.base - This test is passed as : Announcement is Created
-16:53:51.230 [main] INFO  resources.base - This test is passed as : Announcement is Approved
-16:57:38.318 [main] INFO  resources.base - This test is Failed as : Announcement is not created as Failed
-15:37:21.616 [main] INFO  resources.base - This test is Failed as : Announcement is not created as Failed
-15:49:20.286 [main] INFO  resources.base - This test is Failed as : Announcement is not created as Failed
-15:52:42.851 [main] INFO  resources.base - This test is passed as : Announcement is Created
-15:52:44.638 [main] INFO  resources.base - This test is passed as : Announcement is Approved
-15:56:04.092 [main] INFO  resources.base - This test is passed as : Announcement is Created
-15:56:04.146 [main] INFO  resources.base - This test is passed as : Announcement is Approved
-16:16:55.090 [main] INFO  resources.base - This test is passed as : Announcement is Created
-16:16:55.478 [main] INFO  resources.base - This test is passed as : Announcement is Approved
-16:18:42.767 [main] INFO  resources.base - This test is Failed as : Announcement is not created as Failed
-16:30:02.548 [main] INFO  resources.base - This test is passed as : Announcement is Created
-16:30:02.602 [main] INFO  resources.base - This test is passed as : Announcement is Approved
-16:30:03.295 [main] INFO  resources.base - This test is Failed as : Announcement is not created as Failed
-16:31:18.715 [main] INFO  resources.base - This test is passed as : Announcement is Created
-16:31:18.761 [main] INFO  resources.base - This test is passed as : Announcement is Approved
-16:31:30.330 [main] INFO  resources.base - This test is Failed as : Announcement is not created as Failed
-16:36:53.484 [main] INFO  resources.base - This test is passed as : Announcement is Created
-16:36:53.698 [main] INFO  resources.base - This test is passed as : Announcement is Approved
-16:37:09.345 [main] INFO  resources.base - This test is Failed as : Announcement is not created as Failed
+16:39:47.955 [main] INFO  resources.base - This test is passed as : Announcement is Created
+16:39:48.065 [main] INFO  resources.base - This test is passed as : Announcement is Approved
+16:39:50.270 [main] INFO  resources.base - This test is Failed as : Announcement is not created as Failed
+16:41:35.913 [main] INFO  resources.base - This test is passed as : Announcement is Created
+16:41:35.926 [main] INFO  resources.base - This test is passed as : Announcement is Approved
+16:42:25.102 [main] INFO  resources.base - This test is passed as : Announcement is Created
+16:42:25.102 [main] INFO  resources.base - This test is passed as : Announcement is Approved
+16:44:58.124 [main] INFO  resources.base - This test is passed as : Announcement is Created
+16:44:58.177 [main] INFO  resources.base - This test is passed as : Announcement is Approved
+16:45:39.835 [main] INFO  resources.base - This test is passed as : Announcement is Created
+16:45:39.835 [main] INFO  resources.base - This test is passed as : Announcement is Approved
+16:48:43.461 [main] INFO  resources.base - This test is passed as : Announcement is Created
+16:48:43.574 [main] INFO  resources.base - This test is passed as : Announcement is Approved
+16:49:32.772 [main] INFO  resources.base - This test is passed as : Announcement is Created
+16:49:32.772 [main] INFO  resources.base - This test is passed as : Announcement is Approved
+16:54:18.548 [main] INFO  resources.base - This test is passed as : Announcement is Created
+16:54:18.594 [main] INFO  resources.base - This test is passed as : Announcement is Approved
+16:55:20.516 [main] INFO  resources.base - This test is passed as : Announcement is Created
+16:55:20.516 [main] INFO  resources.base - This test is passed as : Announcement is Approved
+16:58:26.231 [main] INFO  resources.base - This test is passed as : Announcement is Created
+16:58:28.142 [main] INFO  resources.base - This test is passed as : Announcement is Approved
+16:59:28.150 [main] INFO  resources.base - This test is passed as : Announcement is Created
+16:59:28.150 [main] INFO  resources.base - This test is passed as : Announcement is Approved
+17:01:59.657 [main] INFO  resources.base - This test is passed as : Announcement is Created
+17:01:59.770 [main] INFO  resources.base - This test is passed as : Announcement is Approved
+17:02:48.331 [main] INFO  resources.base - This test is passed as : Announcement is Created
+17:02:48.331 [main] INFO  resources.base - This test is passed as : Announcement is Approved
+17:08:56.520 [main] INFO  resources.base - This test is passed as : Announcement is Created
+17:08:56.567 [main] INFO  resources.base - This test is passed as : Announcement is Approved
+17:09:55.366 [main] INFO  resources.base - This test is passed as : Announcement is Created
+17:09:55.366 [main] INFO  resources.base - This test is passed as : Announcement is Approved
+17:19:42.779 [main] INFO  resources.base - This test is Failed as : Announcement is not created as Failed
+17:26:21.023 [main] INFO  resources.base - This test is passed as : Announcement is Created
+17:26:22.470 [main] INFO  resources.base - This test is passed as : Announcement is Approved
+17:27:30.790 [main] INFO  resources.base - This test is passed as : Announcement is Created
+17:27:30.790 [main] INFO  resources.base - This test is passed as : Announcement is Approved
+17:45:03.450 [main] INFO  resources.base - This test is passed as : Announcement is Created
+17:45:03.497 [main] INFO  resources.base - This test is passed as : Announcement is Approved
+18:06:25.460 [main] INFO  resources.base - This test is passed as : Announcement is Created
+18:06:26.189 [main] INFO  resources.base - This test is passed as : Announcement is Approved
+18:07:02.836 [main] INFO  resources.base - This test is passed as : Announcement is Created
+18:07:02.836 [main] INFO  resources.base - This test is passed as : Announcement is Approved
+18:42:55.238 [main] INFO  resources.base - This test is passed as : Announcement is Created
+18:42:56.149 [main] INFO  resources.base - This test is passed as : Announcement is Approved
+18:43:03.694 [main] INFO  resources.base - This test is passed as : Announcement is Created
+18:43:03.694 [main] INFO  resources.base - This test is passed as : Announcement is Approved
+19:02:10.047 [main] INFO  resources.base - This test is Failed as : Announcement is not created as Failed
+19:02:26.320 [main] INFO  resources.base - This test is passed as : Announcement is Created
+19:02:26.320 [main] INFO  resources.base - This test is passed as : Announcement is Approved
+19:05:27.352 [main] INFO  resources.base - This test is passed as : Announcement is Created
+19:05:27.357 [main] INFO  resources.base - This test is passed as : Announcement is Approved
+19:05:36.239 [main] INFO  resources.base - This test is passed as : Announcement is Created
+19:05:36.239 [main] INFO  resources.base - This test is passed as : Announcement is Approved
+19:15:03.001 [main] INFO  resources.base - This test is passed as : Announcement is Created

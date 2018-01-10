@@ -1,4 +1,4 @@
-package MeridianPackages;
+package com.objectrepository.util;
 
 
 public class App 

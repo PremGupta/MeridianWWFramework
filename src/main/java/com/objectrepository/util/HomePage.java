@@ -1,4 +1,4 @@
-package ObjectRepository_Announcements;
+package com.objectrepository.util;
 
 import java.util.concurrent.TimeUnit;
 

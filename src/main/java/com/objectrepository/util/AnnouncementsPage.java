@@ -1,20 +1,22 @@
-package ObjectRepository_Announcements;
+package com.objectrepository.util;
 
 import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import MeridianPackages.Screenshot;
+import com.meridian.test.Screenshot;
+import com.resources.util.base;
 
-public class AnnouncementsPage {
+public class AnnouncementsPage extends base{
 
 	public static WebDriver driver;
 
@@ -31,7 +33,8 @@ public class AnnouncementsPage {
 	By iFrame = By.xpath(".//div[@id='cke_1_contents']/iframe");
 	By submit = By.xpath("//button[@id='submit']");
 	By approved = By.xpath("//input[@value='Approved']");
-	public static int randomnumber = (int) (10 + Math.random() * ((10000 - 1) + 1));
+	By past= By.xpath("//a[text()='Past']");
+	By annList = By.xpath("//*[@id='table_wrapper']//table/tbody/tr[1]/td[2]/b");
 
 	public AnnouncementsPage(WebDriver driver) {
 		this.driver = driver;
@@ -76,13 +79,21 @@ public class AnnouncementsPage {
 	public WebElement Approved() {
 		return driver.findElement(approved);
 	}
+	
+	public WebElement Past() {
+		return driver.findElement(past);
+	}
+
+	public WebElement AnnList() {
+		return driver.findElement(annList);
+	}
 
 	public void ClickCreateNewAnnouncement() {
 		CreateNewAnnouncement().click();
 	}
 
-	public void EnterAnnouncementTitle() {
-		AnnouncementTitle().sendKeys("Test123" + randomnumber);
+	public void EnterAnnouncementTitle(String title) {
+		AnnouncementTitle().sendKeys(title);
 	}
 
 	public void ClickFromDate() {
@@ -125,26 +136,42 @@ public class AnnouncementsPage {
 
 	public void WaitForApprovalToAppear() {
 		WebDriverWait wait = new WebDriverWait(driver, 15);
-		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(approved));
-	}
-
-	public void VerifyAnnouncementCreated() throws IOException {
-		assertEquals(driver.findElement(By.xpath("//*[@id=\'announcement\']/div/div/div[1]/ul/li[1]/span")).getText(),
-				"Test123" + randomnumber);
-		System.out.println("Test123" + randomnumber);
-		Screenshot.getscreenshot(driver, randomnumber);
+		wait.until(ExpectedConditions.elementToBeClickable(approved));
 	}
 
 	public void ClickApprovalButton() {
 		WebElement Approved = Approved();
 		Actions act1 = new Actions(driver);
 		act1.moveToElement(Approved).build().perform();
-		act1.moveToElement(Approved).click();
+		act1.moveToElement(Approved).click().build().perform();
 	}
 
-	public void CreateAnnouncement() throws IOException {
+	public void VerifyAnnouncement(String announcementName) throws IOException {
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+	    Past().click();
+		WebDriverWait wait = new WebDriverWait(driver, 15);
+		wait.until(ExpectedConditions.presenceOfElementLocated(annList));
+		List<WebElement> annListElements = driver.findElements(annList);
+
+		for (int i = 0; i < annListElements.size(); i++) {
+			System.out.println(driver.findElements(By.xpath("//*[@id='table_wrapper']//table/tbody/tr["+i+"]/td[2]/b")).get(i).getText());
+			boolean annFound = driver.findElements(By.xpath("//*[@id='table_wrapper']//table/tbody/tr["+i+"]/td[2]/b")).get(i).getText().contains(announcementName);
+			if (annFound == true) {
+				String annFoundText = driver.findElements(By.xpath("//*[@id='table_wrapper']//table/tbody/tr["+i+"]/td[2]/b")).get(i).getText();
+				System.out.println(annFoundText);
+				assertEquals(
+						driver.findElement(By.xpath("//*[@id='table_wrapper']//table/tbody/tr[i]/td[2]/b")).getText(),
+						announcementName);
+				System.out.println("VerifyAnnouncement is Failed");
+			//	Screenshot.getscreenshot(driver, announcementName);
+
+			} 
+		}
+	}
+
+	public void CreateAnnouncement(String announcementName) throws IOException {
 		ClickCreateNewAnnouncement();
-		EnterAnnouncementTitle();
+		EnterAnnouncementTitle(announcementName);
 		ClickFromDate();
 		SelectStartDate();
 		ClickThruDate();
@@ -154,7 +181,11 @@ public class AnnouncementsPage {
 		EnterTextIniFrameTextField();
 		ClickSubmitButton();
 		WaitForApprovalToAppear();
-		VerifyAnnouncementCreated();
 		ClickApprovalButton();
 	}
+
+	public void GotoAnnouncementListingPage() {
+		driver.get("abc.html");
+	}
+
 }

@@ -1,109 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="38367" started-at="2018-01-09T12:14:25Z" finished-at="2018-01-09T12:15:03Z">
+  <suite name="Default suite" duration-ms="101811" started-at="2018-01-10T14:27:55Z" finished-at="2018-01-10T14:29:37Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="38367" started-at="2018-01-09T12:14:25Z" finished-at="2018-01-09T12:15:03Z">
-      <class name="MeridianPackages.Announcements">
-        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:MeridianPackages.Announcements@37f1104d]" name="initializeDriver" is-config="true" duration-ms="20668" started-at="2018-01-09T17:44:25Z" finished-at="2018-01-09T17:44:46Z">
+    <test name="Default test" duration-ms="101811" started-at="2018-01-10T14:27:55Z" finished-at="2018-01-10T14:29:37Z">
+      <class name="com.meridian.test.Announcements">
+        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:com.meridian.test.Announcements@7cbd213e]" name="initializeDriver" is-config="true" duration-ms="8146" started-at="2018-01-10T19:57:55Z" finished-at="2018-01-10T19:58:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method status="PASS" signature="LoginFlow()[pri:0, instance:MeridianPackages.Announcements@37f1104d]" name="LoginFlow" duration-ms="17614" started-at="2018-01-09T17:44:46Z" finished-at="2018-01-09T17:45:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LoginFlow -->
-        <test-method status="FAIL" signature="LogForFail(java.lang.Exception)[pri:0, instance:MeridianPackages.Announcements@37f1104d]" name="LogForFail" is-config="true" duration-ms="0" started-at="2018-01-09T17:45:03Z" finished-at="2018-01-09T17:45:03Z">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Can inject only one of <ITestContext, XmlTest, Method, Object[]> into a AfterMethod annotated LogForFail.
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Can inject only one of <ITestContext, XmlTest, Method, Object[]> into a AfterMethod annotated LogForFail.
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
-	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:244)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:172)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:458)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:118)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:206)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:723)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LogForFail -->
-        <test-method status="SKIP" signature="AnnouncementCreation()[pri:0, instance:MeridianPackages.Announcements@37f1104d]" name="AnnouncementCreation" duration-ms="0" started-at="2018-01-09T17:45:03Z" depends-on-methods="MeridianPackages.Announcements.LoginFlow" finished-at="2018-01-09T17:45:03Z">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Can inject only one of <ITestContext, XmlTest, Method, Object[]> into a AfterMethod annotated LogForFail.
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Can inject only one of <ITestContext, XmlTest, Method, Object[]> into a AfterMethod annotated LogForFail.
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
-	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:244)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:172)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:458)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:118)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:206)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:723)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method status="PASS" signature="AnnouncementCreation()[pri:1, instance:com.meridian.test.Announcements@7cbd213e]" name="AnnouncementCreation" duration-ms="64965" started-at="2018-01-10T19:58:04Z" finished-at="2018-01-10T19:59:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AnnouncementCreation -->
-        <test-method status="SKIP" signature="teardown()[pri:0, instance:MeridianPackages.Announcements@37f1104d]" name="teardown" is-config="true" duration-ms="0" started-at="2018-01-09T17:45:03Z" finished-at="2018-01-09T17:45:03Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.meridian.test.Announcements@7cbd213e]" name="teardown" is-config="true" duration-ms="2326" started-at="2018-01-10T19:59:09Z" finished-at="2018-01-10T19:59:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- MeridianPackages.Announcements -->
+        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:com.meridian.test.Announcements@7cbd213e]" name="initializeDriver" is-config="true" duration-ms="10007" started-at="2018-01-10T19:59:11Z" finished-at="2018-01-10T19:59:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeDriver -->
+        <test-method status="PASS" signature="LoginFlow()[pri:2, instance:com.meridian.test.Announcements@7cbd213e]" name="LoginFlow" duration-ms="14028" started-at="2018-01-10T19:59:21Z" finished-at="2018-01-10T19:59:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginFlow -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.meridian.test.Announcements@7cbd213e]" name="teardown" is-config="true" duration-ms="2314" started-at="2018-01-10T19:59:35Z" finished-at="2018-01-10T19:59:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="cleanUP()[pri:0, instance:com.meridian.test.Announcements@7cbd213e]" name="cleanUP" is-config="true" duration-ms="0" started-at="2018-01-10T19:59:37Z" finished-at="2018-01-10T19:59:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUP -->
+      </class> <!-- com.meridian.test.Announcements -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

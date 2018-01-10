@@ -33,7 +33,6 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.11</version>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.aventstack</groupId>
@@ -81,7 +80,7 @@
 	<build>
 		<resources>
 			<resource>
-				<directory>src/main/java/resources</directory>
+				<directory>src/main/java/com.resources.util</directory>
 				<filtering>true</filtering>
 			</resource>
 		</resources>

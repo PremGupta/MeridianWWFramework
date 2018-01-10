@@ -1,4 +1,4 @@
-package resources;
+package com.resources.util;
 
 import java.io.File;
 import java.util.Calendar;

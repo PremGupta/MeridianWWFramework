@@ -1,4 +1,4 @@
-package MeridianPackages;
+package com.meridian.test;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
