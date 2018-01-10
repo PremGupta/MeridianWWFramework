@@ -1,4 +1,4 @@
-package com.meridian.test;
+package com.resources.util;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;

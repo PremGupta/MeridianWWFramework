@@ -9,6 +9,7 @@ import com.objectrepository.util.HomePage;
 import com.objectrepository.util.LoginPage;
 import com.objectrepository.util.LogoutPage;
 import com.resources.util.ReportLogs;
+import com.resources.util.TestCaseBase;
 import com.resources.util.base;
 
 public class Announcements extends TestCaseBase{
