@@ -161,7 +161,7 @@
 
 						<configuration>
 							<!-- From Email address -->
-							<from>prem2604@gmail.com</from>
+							<from>premguptaemtec@gmail.com</from>
 
 							<!-- Email subject -->
 							<subject>Test Automation Report</subject>
@@ -177,22 +177,22 @@
 							<mailAltConfig>true</mailAltConfig>
 
 							<!-- Email Authentication(USername and Password) -->
-							<mailuser>prem2604@gmail.com</mailuser>
-							<mailpassword>@Pavitri2604#</mailpassword>
+							<mailuser>premguptaemtec@gmail.com</mailuser>
+							<mailpassword>@Emtec123#</mailpassword>
 
 							<receivers>
 								<!-- To Email address -->
-								<receiver>premgupta2604@gmail.com</receiver>
+								<receiver>premguptaemtec@gmail.com</receiver>
 								<receiver>prem2604@gmail.com</receiver>
 							</receivers>
 
 							<fileSets>
 								<fileSet>
 									<!-- Report directory Path -->
-									<directory>E://MeridianWWFramework//Reports</directory>
+									<directory>./MeridianWWFramework\\Reports</directory>
 									<includes>
 										<!-- Report file name -->
-										<include>ExecutionReport*.html</include>
+										<include>ExecutionReport_com.meridian.test.*.html</include>
 									</includes>
 									<!-- Use Regular Expressions like **/*.html if you want all the 
 										html files to send -->

@@ -9,9 +9,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import com.resources.util.Config;
-import com.resources.util.base;
 
-public class LoginPage extends base {
+public class LoginPage {
 	// public Properties prop;
 
 	By username = By.id("username");

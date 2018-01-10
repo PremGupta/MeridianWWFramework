@@ -5,10 +5,8 @@ import java.util.Properties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import com.resources.util.base;
  
-public class LogoutPage extends base {
+public class LogoutPage {
 	public Properties prop;
 
 	By logout = By.xpath("//a[text()='Logout']");

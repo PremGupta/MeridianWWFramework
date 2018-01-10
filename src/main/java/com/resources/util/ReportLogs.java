@@ -6,7 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 
-import com.meridian.test.Screenshot;
+import com.resources.util.Screenshot;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -20,7 +20,8 @@ public class ReportLogs {
 	public static void Pass(String classname, String testname, String message, WebDriver driver) throws IOException  {
 		if (report == null)
 			report = new ExtentReports("./Reports/ExecutionReport_" + classname + ".html");
-
+		log.info("This test is Passes as : "+testname+"is PASSED");
+		logger.log(LogStatus.FAIL, "Test Verified_"+testname+": PASSED");
 		logger = report.startTest(testname);
 		logger.log(LogStatus.PASS, message);
 		report.endTest(logger);
@@ -31,7 +32,8 @@ public class ReportLogs {
 	public static void Fail(String classname, String testname, Exception e, WebDriver driver) throws IOException {
 		if (report == null)
 			report = new ExtentReports("./Reports/ExecutionReport_" + classname + ".html");
-
+		log.info("This test is Failed as : "+testname+"is FAILED");
+		logger.log(LogStatus.FAIL, "Test Verified_"+testname+": FAILED");
 		logger = report.startTest(testname);
 		logger.log(LogStatus.FAIL, e.getMessage());
 		report.endTest(logger);

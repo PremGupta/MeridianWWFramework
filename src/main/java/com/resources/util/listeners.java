@@ -1,15 +1,11 @@
-package com.meridian.test;
-
-import java.io.IOException;
+package com.resources.util;
 
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import com.resources.util.base;
-
 public class listeners implements ITestListener  {
-base b=new base();
+TestCaseBase b=new TestCaseBase();
 	public void onFinish(ITestContext arg0) {
 
 	}

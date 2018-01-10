@@ -1,37 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="101811" started-at="2018-01-10T14:27:55Z" finished-at="2018-01-10T14:29:37Z">
+  <suite name="Default suite" duration-ms="103425" started-at="2018-01-10T20:55:18Z" finished-at="2018-01-10T20:57:01Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="101811" started-at="2018-01-10T14:27:55Z" finished-at="2018-01-10T14:29:37Z">
+    <test name="Default test" duration-ms="103425" started-at="2018-01-10T20:55:18Z" finished-at="2018-01-10T20:57:01Z">
       <class name="com.meridian.test.Announcements">
-        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:com.meridian.test.Announcements@7cbd213e]" name="initializeDriver" is-config="true" duration-ms="8146" started-at="2018-01-10T19:57:55Z" finished-at="2018-01-10T19:58:04Z">
+        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:com.meridian.test.Announcements@5891e32e]" name="initializeDriver" is-config="true" duration-ms="16099" started-at="2018-01-11T02:25:18Z" finished-at="2018-01-11T02:25:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method status="PASS" signature="AnnouncementCreation()[pri:1, instance:com.meridian.test.Announcements@7cbd213e]" name="AnnouncementCreation" duration-ms="64965" started-at="2018-01-10T19:58:04Z" finished-at="2018-01-10T19:59:09Z">
+        <test-method status="PASS" signature="AnnouncementCreation()[pri:1, instance:com.meridian.test.Announcements@5891e32e]" name="AnnouncementCreation" duration-ms="86889" started-at="2018-01-11T02:25:34Z" finished-at="2018-01-11T02:27:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AnnouncementCreation -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.meridian.test.Announcements@7cbd213e]" name="teardown" is-config="true" duration-ms="2326" started-at="2018-01-10T19:59:09Z" finished-at="2018-01-10T19:59:11Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.meridian.test.Announcements@5891e32e]" name="teardown" is-config="true" duration-ms="280" started-at="2018-01-11T02:27:01Z" finished-at="2018-01-11T02:27:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:com.meridian.test.Announcements@7cbd213e]" name="initializeDriver" is-config="true" duration-ms="10007" started-at="2018-01-10T19:59:11Z" finished-at="2018-01-10T19:59:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeDriver -->
-        <test-method status="PASS" signature="LoginFlow()[pri:2, instance:com.meridian.test.Announcements@7cbd213e]" name="LoginFlow" duration-ms="14028" started-at="2018-01-10T19:59:21Z" finished-at="2018-01-10T19:59:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LoginFlow -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.meridian.test.Announcements@7cbd213e]" name="teardown" is-config="true" duration-ms="2314" started-at="2018-01-10T19:59:35Z" finished-at="2018-01-10T19:59:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="cleanUP()[pri:0, instance:com.meridian.test.Announcements@7cbd213e]" name="cleanUP" is-config="true" duration-ms="0" started-at="2018-01-10T19:59:37Z" finished-at="2018-01-10T19:59:37Z">
+        <test-method status="PASS" signature="cleanUP()[pri:0, instance:com.meridian.test.Announcements@5891e32e]" name="cleanUP" is-config="true" duration-ms="124" started-at="2018-01-11T02:27:01Z" finished-at="2018-01-11T02:27:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUP -->
