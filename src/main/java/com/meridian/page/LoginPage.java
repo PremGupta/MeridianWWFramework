@@ -1,4 +1,4 @@
-package com.objectrepository.util;
+package com.meridian.page;
 
 import static org.testng.Assert.assertEquals;
 
@@ -8,11 +8,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import com.resources.util.Config;
+import com.meridian.util.Config;
 
 public class LoginPage {
-	// public Properties prop;
-
+ 
 	By username = By.id("username");
 	By password = By.id("password");
 	By loginButton = By.xpath("//input[@value='Login']");
@@ -23,40 +22,45 @@ public class LoginPage {
 		 this.driver = driver;
 	}
 
-	public WebElement Username() {
+	public WebElement username() {
 		return driver.findElement(username);
-
 	}
 
-	public WebElement Password() {
+	public WebElement password() {
 		return driver.findElement(password);
 	}
 
-	public WebElement LoginButton() {
+	public WebElement loginButton() {
 		return driver.findElement(loginButton);
 	}
 
-	public void EnterUname() throws IOException {
+	public void enterUname() throws IOException {
 		String username = Config.getValue("uname");
-		Username().sendKeys(username);
+		username().sendKeys(username);
 	}
 
-	public void EnterPassword() throws IOException {
-		String Password = Config.getValue("pass");
-		Password().sendKeys(Password);
+	public void enterPassword() throws IOException {
+		String password = Config.getValue("pass");
+		password().sendKeys(password);
 	}
 
-	public void ClickLoginButton() {
-		LoginButton().click();
+	public void clickLoginButton() {
+		loginButton().click();
 	}
 
-	public void Login() throws IOException {
-		EnterUname();
-		EnterPassword();
-		ClickLoginButton();
+	public boolean login() {
+		try {
+			enterUname();
+			enterPassword();
+			clickLoginButton();
+			return true;
+		} catch (IOException e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 
-	public void VerifyLandedOnHomePage() {
+	public void verifyLandedOnHomePage() {
 		assertEquals(driver.findElement(By.xpath("//h1[text()='Welcome']")).getText(), "Welcome");
 	}
 }

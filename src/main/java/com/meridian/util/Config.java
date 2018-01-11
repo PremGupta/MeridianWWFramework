@@ -1,4 +1,4 @@
-package com.resources.util;
+package com.meridian.util;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

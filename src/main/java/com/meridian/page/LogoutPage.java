@@ -1,29 +1,24 @@
-package com.objectrepository.util;
-
-import java.util.Properties;
+package com.meridian.page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
  
 public class LogoutPage {
-	public Properties prop;
-
+ 	
 	By logout = By.xpath("//a[text()='Logout']");
+	
 	WebDriver driver;
+	
 	public LogoutPage(WebDriver driver) {
 		this.driver = driver;
 	}
 
-	public WebElement LogoutButton() {
+	public WebElement logoutButton() {
 		return driver.findElement(logout);
 	}
 
-	public void ClickLogoutButton() {
-		LogoutButton().click();
-	}
-
-	public void Logout() {
-		ClickLogoutButton();
+	public void logout() {
+		logoutButton().click();
 	}
 }

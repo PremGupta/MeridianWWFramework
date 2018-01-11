@@ -10,12 +10,9 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
 		<runSuite>Suite</runSuite>
 	</properties>
-
 	<dependencies>
-
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -102,6 +99,8 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.20</version>
 				<configuration>
+					<testFailureIgnore>true</testFailureIgnore>
+					<testErrorIgnore>true</testErrorIgnore>
 					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
@@ -164,7 +163,7 @@
 							<from>premguptaemtec@gmail.com</from>
 
 							<!-- Email subject -->
-							<subject>Test Automation Report</subject>
+							<subject>Test Automation Report - ${maven.build.timestamp} </subject>
 
 							<!-- Fail the build if the mail doesnt reach -->
 							<failonerror>true</failonerror>
@@ -189,7 +188,7 @@
 							<fileSets>
 								<fileSet>
 									<!-- Report directory Path -->
-									<directory>./MeridianWWFramework\\Reports</directory>
+									<directory>Reports</directory>
 									<includes>
 										<!-- Report file name -->
 										<include>ExecutionReport_com.meridian.test.*.html</include>

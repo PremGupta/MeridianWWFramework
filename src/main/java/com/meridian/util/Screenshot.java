@@ -1,4 +1,4 @@
-package com.resources.util;
+package com.meridian.util;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 public class Screenshot {
-	public static String Randomscreenshotname;
+	//public static String randomscreenshotname;
 
 	public static void passedStepsScreenshot(WebDriver driver, String filename) throws IOException {
 		File snapshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);

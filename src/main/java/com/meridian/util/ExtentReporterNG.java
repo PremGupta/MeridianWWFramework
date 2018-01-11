@@ -1,11 +1,11 @@
-package com.resources.util;
+package com.meridian.util;
 
 import java.io.File;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
- 
+
 import org.testng.IReporter;
 import org.testng.IResultMap;
 import org.testng.ISuite;
@@ -13,13 +13,12 @@ import org.testng.ISuiteResult;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.xml.XmlSuite;
-import org.testng.*;
- 
+
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
  
-public class ExtentReporterNG  extends TestCaseBase implements IReporter {
+public class ExtentReporterNG  implements IReporter {
     private ExtentReports extent;
  
     public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {

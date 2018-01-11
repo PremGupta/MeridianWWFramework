@@ -2,15 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 	<listeners>
-		<listener class-name="com.resources.util.listeners" />
-		<listener class-name="com.resources.util.ExtentReporterNG" />
+		<listener class-name="com.meridian.util.TestListener" />
+		<listener class-name="com.meridian.util.ExtentReporterNG" />
 	</listeners>
 
 	<test name="Announcements Creation">
 		<classes>
-			<class name="com.meridian.test.Login" />
 			<class name="com.meridian.test.Announcements" />
-
 		</classes>
 	</test>
 </suite>

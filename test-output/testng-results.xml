@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="103425" started-at="2018-01-10T20:55:18Z" finished-at="2018-01-10T20:57:01Z">
+  <suite name="Default suite" duration-ms="84639" started-at="2018-01-11T14:09:04Z" finished-at="2018-01-11T14:10:29Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="103425" started-at="2018-01-10T20:55:18Z" finished-at="2018-01-10T20:57:01Z">
+    <test name="Default test" duration-ms="84639" started-at="2018-01-11T14:09:04Z" finished-at="2018-01-11T14:10:29Z">
       <class name="com.meridian.test.Announcements">
-        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:com.meridian.test.Announcements@5891e32e]" name="initializeDriver" is-config="true" duration-ms="16099" started-at="2018-01-11T02:25:18Z" finished-at="2018-01-11T02:25:34Z">
+        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:com.meridian.test.Announcements@192d3247]" name="initializeDriver" is-config="true" duration-ms="9675" started-at="2018-01-11T19:39:04Z" finished-at="2018-01-11T19:39:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method status="PASS" signature="AnnouncementCreation()[pri:1, instance:com.meridian.test.Announcements@5891e32e]" name="AnnouncementCreation" duration-ms="86889" started-at="2018-01-11T02:25:34Z" finished-at="2018-01-11T02:27:01Z">
+        <test-method status="PASS" signature="LoginFlow()[pri:0, instance:com.meridian.test.Announcements@192d3247]" name="LoginFlow" duration-ms="15876" started-at="2018-01-11T19:39:14Z" finished-at="2018-01-11T19:39:29Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AnnouncementCreation -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.meridian.test.Announcements@5891e32e]" name="teardown" is-config="true" duration-ms="280" started-at="2018-01-11T02:27:01Z" finished-at="2018-01-11T02:27:01Z">
+        </test-method> <!-- LoginFlow -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.meridian.test.Announcements@192d3247]" name="teardown" is-config="true" duration-ms="235" started-at="2018-01-11T19:39:29Z" finished-at="2018-01-11T19:39:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="cleanUP()[pri:0, instance:com.meridian.test.Announcements@5891e32e]" name="cleanUP" is-config="true" duration-ms="124" started-at="2018-01-11T02:27:01Z" finished-at="2018-01-11T02:27:01Z">
+        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:com.meridian.test.Announcements@192d3247]" name="initializeDriver" is-config="true" duration-ms="8233" started-at="2018-01-11T19:39:30Z" finished-at="2018-01-11T19:39:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeDriver -->
+        <test-method status="PASS" signature="AnnouncementCreation()[pri:1, instance:com.meridian.test.Announcements@192d3247]" name="AnnouncementCreation" duration-ms="48234" started-at="2018-01-11T19:39:38Z" finished-at="2018-01-11T19:40:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AnnouncementCreation -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.meridian.test.Announcements@192d3247]" name="teardown" is-config="true" duration-ms="2369" started-at="2018-01-11T19:40:26Z" finished-at="2018-01-11T19:40:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="cleanUP()[pri:0, instance:com.meridian.test.Announcements@192d3247]" name="cleanUP" is-config="true" duration-ms="0" started-at="2018-01-11T19:40:29Z" finished-at="2018-01-11T19:40:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUP -->
