@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class Announcements extends TestCaseBase {
 
-	@Test(enabled = true, priority = 0)
+	@Test(enabled = false, priority = 0)
 	public void LoginFlow() throws IOException, InterruptedException {
 
 		loginPage.login();
@@ -24,6 +24,7 @@ public class Announcements extends TestCaseBase {
 		loginPage.login();
 		homePage.clickAnnouncement();
 		annPage.createAnnouncement(announcementName);
+		annPage.verifyAnnouncement(announcementName);
 		logoutPage.logout();
 	}
 }

@@ -1,6 +1,10 @@
 package com.meridian.page;
 
+import static org.testng.Assert.assertEquals;
+
 import java.io.IOException;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -29,7 +33,7 @@ public class AnnouncementsPage {
 	By approved = By.xpath("//input[@value='Approved']");
 	By future = By.xpath("//a[text()='Future']");
 	By showResult = By.xpath("//select[@name='table_length']");
-	// By search=By.xpath("//*[@id='table_filter']/label/input");
+	By search = By.xpath("//div[@id='futureTab']//label/input");
 	By annList = By.xpath("//*[@id='table_wrapper']//table/tbody/tr");
 
 	public AnnouncementsPage(WebDriver driver) {
@@ -84,8 +88,8 @@ public class AnnouncementsPage {
 		return driver.findElement(annList);
 	}
 
-	public WebElement showResult() {
-		return driver.findElement(showResult);
+	public WebElement search() {
+		return driver.findElement(search);
 	}
 
 	public void clickCreateNewAnnouncement() {
@@ -150,12 +154,29 @@ public class AnnouncementsPage {
 		future().click();
 	}
 
-	public void showResultSelection() {
-		WebElement show = showResult();
-		show.click();
-		Select sel = new Select(show);
-		sel.selectByVisibleText("100");
+	public void searchAnnouncement(String announcementName) {
+		search().sendKeys(announcementName);
 	}
+
+	public void verifyAnnouncement(String announcementName) throws IOException {
+		future().click();
+		WebDriverWait wait = new WebDriverWait(driver, 15);
+		wait.until(ExpectedConditions.presenceOfElementLocated(annList));
+		List<WebElement> annListElements = driver.findElements(annList);
+
+		for (int i = 1; i < annListElements.size(); i++) {
+			boolean annFound = driver.findElements(By.xpath("//div[@id='futureTab']//table/tbody/tr[1]/td[2]/b")).get(i)
+					.getText().contains(announcementName);
+			if (annFound == true) {
+				String annFoundText = driver.findElements(By.xpath("//div[@id='futureTab']//table/tbody/tr[1]/td[2]/b"))
+						.get(i).getText();
+				assertEquals(
+						driver.findElement(By.xpath("//div[@id='futureTab']//table/tbody/tr[1]/td[2]/b")).getText(),
+						announcementName);
+			}
+		}
+	}
+
 	public void createAnnouncement(String announcementName) throws IOException, InterruptedException {
 		clickCreateNewAnnouncement();
 		enterAnnouncementTitle(announcementName);
@@ -170,7 +191,7 @@ public class AnnouncementsPage {
 		waitForApprovalToAppear();
 		clickApprovalButton();
 		clickFuture();
-		showResultSelection();
+		searchAnnouncement(announcementName);
 	}
 
 }

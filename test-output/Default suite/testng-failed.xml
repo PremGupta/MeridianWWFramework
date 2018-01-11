@@ -5,10 +5,10 @@
     <classes>
       <class name="com.meridian.test.Announcements">
         <methods>
-          <include name="initializeDriver"/>
-          <include name="cleanUP"/>
-          <include name="LoginFlow"/>
+          <include name="AnnouncementCreation"/>
           <include name="teardown"/>
+          <include name="setup"/>
+          <include name="cleanUP"/>
         </methods>
       </class> <!-- com.meridian.test.Announcements -->
     </classes>
